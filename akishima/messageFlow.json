@@ -7,7 +7,7 @@
       { "optionId": 1, "text": "就労している", "score": 0, "scoreCondition": null },
       { "optionId": 2, "text": "出産（出産予定月とその前後の各2か月にある）", "score": 18, "scoreCondition": null },
       { "optionId": 3, "text": "疾病で保育にあたれない常態にある", "score": 0, "scoreCondition": null },
-      { "optionId": 4, "text": "障害があり、いずれかの手帳<p class='description'>（＊）</p>を持っている", "score": 0, "scoreCondition": null },
+      { "optionId": 4, "text": "障害があり、いずれかの手帳 <p class='description'> （＊） </p> を持っている", "score": 0, "scoreCondition": null },
       { "optionId": 5, "text": "存在しない（死亡／離別／行方不明／拘禁等）", "score": 20, "scoreCondition": null },
       { "optionId": 6, "text": "介護もしくは看護をしている", "score": 0, "scoreCondition": null },
       { "optionId": 7, "text": "災害により家屋の損傷その他の災害復旧のため保育にあたれない", "score": 20, "scoreCondition": null },
@@ -15,7 +15,7 @@
       { "optionId": 9, "text": "就学している", "score": 0, "scoreCondition": null },
       { "optionId": 10, "text": "児童の安全のために適切な保育が必要であると市長が特別に認める場合（※）", "score": 10, "scoreCondition": null }
     ],
-    "description": "（＊）身体障害者手帳／愛の手帳（療育手帳）／精神障害者保健福祉手帳<br/>（※）保育課にお問い合わせください",
+    "description": "（＊）身体障害者手帳／愛の手帳（療育手帳）／精神障害者保健福祉手帳<br />（※）保育課にお問い合わせください",
     "url": null,
     "displayCondition": null
   },
@@ -34,7 +34,7 @@
       { "optionId": 8, "text": "内職（保育所の開所時間帯に週 16 時間以上の就労を常態とする場合）", "score": 12, "scoreCondition": null },
       { "optionId": 9, "text": "その他（勤務の態様から明らかに保育に当たれないと認められる場合）", "score": 12, "scoreCondition": null }      
     ],
-    "description": "1 日の就労時間には、休憩時間・通勤時間が含まれます。なお、下限の基準は、「月 64 時間」とします。<br/>例：月 16 日（週 4 日）以上で、1 日 4 時間以上、又は月 12 日（週 3 日）以上で 1 日 6 時間以上",
+    "description": "1 日の就労時間には、休憩時間・通勤時間が含まれます。なお、下限の基準は、「月 64 時間」とします。<br />例：月 16 日（週 4 日）以上で、1 日 4 時間以上、又は月 12 日（週 3 日）以上で 1 日 6 時間以上",
     "url": null,
     "displayCondition": {
       "conditions": [{ "questionId": 1, "condition": "includes", "answers": [1] }],
@@ -118,7 +118,7 @@
       { "optionId": 1, "text": "就労している", "score": 0, "scoreCondition": null },
       { "optionId": 2, "text": "出産（出産予定月とその前後の各2か月にある）", "score": 18, "scoreCondition": null },
       { "optionId": 3, "text": "疾病で保育にあたれない常態にある", "score": 0, "scoreCondition": null },
-      { "optionId": 4, "text": "障害があり、いずれかの手帳<p class='description'>（＊）</p>を持っている", "score": 0, "scoreCondition": null },
+      { "optionId": 4, "text": "障害があり、いずれかの手帳 <p class='description'> （＊） </p> を持っている", "score": 0, "scoreCondition": null },
       { "optionId": 5, "text": "存在しない（死亡／離別／行方不明／拘禁等）", "score": 20, "scoreCondition": null },
       { "optionId": 6, "text": "介護もしくは看護をしている", "score": 0, "scoreCondition": null },
       { "optionId": 7, "text": "災害により家屋の損傷その他の災害復旧のため保育にあたれない", "score": 20, "scoreCondition": null },
@@ -145,7 +145,7 @@
       { "optionId": 8, "text": "内職（保育所の開所時間帯に週 16 時間以上の就労を常態とする場合）", "score": 12, "scoreCondition": null },
       { "optionId": 9, "text": "その他（勤務の態様から明らかに保育に当たれないと認められる場合）", "score": 12, "scoreCondition": null }      
     ],
-    "description": "1 日の就労時間には、休憩時間・通勤時間が含まれます。なお、下限の基準は、「月 64 時間」とします。<br/>例：月 16 日（週 4 日）以上で、1 日 4 時間以上、又は月 12 日（週 3 日）以上で 1 日 6 時間以上",
+    "description": "1 日の就労時間には、休憩時間・通勤時間が含まれます。なお、下限の基準は、「月 64 時間」とします。<br />例：月 16 日（週 4 日）以上で、1 日 4 時間以上、又は月 12 日（週 3 日）以上で 1 日 6 時間以上",
     "url": null,
     "displayCondition": {
       "conditions": [{ "questionId": 7, "condition": "includes", "answers": [1] }],
@@ -226,7 +226,7 @@
     "sender": "bot",
     "text": "1人目の保護者の就労状況は以下にあたりますが？",
     "options": [
-      { "optionId": 1, "text": "入所月前の就労実績が 3 か月未満の場合（育児休業取得者は除く）<br/>※就労証明書の証明日が属する月の前月末までの 3 か月 ", "score": -1, "scoreCondition": null },
+      { "optionId": 1, "text": "入所月前の就労実績が 3 か月未満の場合（育児休業取得者は除く）<br />※就労証明書の証明日が属する月の前月末までの 3 か月 ", "score": -1, "scoreCondition": null },
       { "optionId": 2, "text": "就労証明書の証明日以降に勤務することが内定している場合", "score": -2, "scoreCondition": null },
       { "optionId": 3, "text": "世帯の生計中心者の失業、倒産等により、緊急に生計費を得るための就労を要する場合", "score": 2, "scoreCondition": null } ,
       { "optionId": 4, "text": "自営業の自営中心者でない場合", "score": -2, "scoreCondition": null }   
@@ -243,7 +243,7 @@
     "sender": "bot",
     "text": "2人目の保護者の就労状況は以下にあたりますが？",
     "options": [
-      { "optionId": 1, "text": "入所月前の就労実績が 3 か月未満の場合（育児休業取得者は除く）<br/>※就労証明書の証明日が属する月の前月末までの 3 か月 ", "score": -1, "scoreCondition": null },
+      { "optionId": 1, "text": "入所月前の就労実績が 3 か月未満の場合（育児休業取得者は除く）<br />※就労証明書の証明日が属する月の前月末までの 3 か月 ", "score": -1, "scoreCondition": null },
       { "optionId": 2, "text": "就労証明書の証明日以降に勤務することが内定している場合", "score": -2, "scoreCondition": null },
       { "optionId": 3, "text": "世帯の生計中心者の失業、倒産等により、緊急に生計費を得るための就労を要する場合", "score": 2, "scoreCondition": null } ,
       { "optionId": 4, "text": "自営業の自営中心者でない場合", "score": -2, "scoreCondition": null }   
@@ -375,7 +375,7 @@
       { "optionId": 1, "text": "はい", "score": 0, "scoreCondition": null },
       { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null } 
     ],
-    "description": "転所項目については、重複加点はできません。重複の場合は、点数の高い方を優先とします。<br/>また、認証保育施設、企業主導型保育事業所等からの申込みは転所の扱いになりません。",
+    "description": "転所項目については、重複加点はできません。重複の場合は、点数の高い方を優先とします。<br />また、認証保育施設、企業主導型保育事業所等からの申込みは転所の扱いになりません。",
     "url": null,
     "displayCondition": null
   },
