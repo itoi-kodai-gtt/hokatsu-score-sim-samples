@@ -52,13 +52,13 @@
       { "optionId": 1, "text": "月20日以上の就労（１日８時間以上又は月160時間以上の就労内定）", "score": 14, "scoreCondition": null },
       { "optionId": 2, "text": "月20日以上の就労（１日６時間以上８時間未満の就労内定）", "score": 11, "scoreCondition": null },
       { "optionId": 3, "text": "月20日以上の就労（１日４時間以上６時間未満の就労内定）", "score": 8, "scoreCondition": null },
-      { "optionId": 1, "text": "月16日以上の就労（１日８時間以上又は月160時間以上の就労内定）", "score": 11, "scoreCondition": null },
-      { "optionId": 2, "text": "月16日以上の就労（１日６時間以上８時間未満の就労内定）", "score": 8, "scoreCondition": null },
-      { "optionId": 3, "text": "月16日以上の就労（１日４時間以上６時間未満の就労内定）", "score": 5, "scoreCondition": null },
-      { "optionId": 1, "text": "月12日以上の就労（１日８時間以上又は月160時間以上の就労内定）", "score": 8, "scoreCondition": null },
-      { "optionId": 2, "text": "月12日以上の就労（１日６時間以上８時間未満の就労内定）", "score": 5, "scoreCondition": null },
-      { "optionId": 3, "text": "月12日以上の就労（１日４時間以上６時間未満の就労内定）", "score": 2, "scoreCondition": null },
-      { "optionId": 9, "text": "上記に該当しないが、月４８時間以上の就労内定", "score": 2, "scoreCondition": null }      
+      { "optionId": 4, "text": "月16日以上の就労（１日８時間以上又は月160時間以上の就労内定）", "score": 11, "scoreCondition": null },
+      { "optionId": 5, "text": "月16日以上の就労（１日６時間以上８時間未満の就労内定）", "score": 8, "scoreCondition": null },
+      { "optionId": 6, "text": "月16日以上の就労（１日４時間以上６時間未満の就労内定）", "score": 5, "scoreCondition": null },
+      { "optionId": 7, "text": "月12日以上の就労（１日８時間以上又は月160時間以上の就労内定）", "score": 8, "scoreCondition": null },
+      { "optionId": 8, "text": "月12日以上の就労（１日６時間以上８時間未満の就労内定）", "score": 5, "scoreCondition": null },
+      { "optionId": 9, "text": "月12日以上の就労（１日４時間以上６時間未満の就労内定）", "score": 2, "scoreCondition": null },
+      { "optionId": 10, "text": "上記に該当しないが、月４８時間以上の就労内定", "score": 2, "scoreCondition": null }      
     ],
     "description": "保護者が保育をできない時間で判断するため、就労時間は休憩時間を含めた時間で判断します。ただし、居宅内就労の場合は実労働時間とし、休憩時間を含みません。",
     "url": null,
@@ -74,8 +74,8 @@
     "options": [
       { "optionId": 1, "text": "入院(概ね1か月以上にわたり、入院又は入院を予定している）", "score": 22, "scoreCondition": null },
       { "optionId": 2, "text": "居宅内療養<br/>常時病臥（概ね1か月以上、1日の大半を病床に臥し、原則医師の診療を継続して受けている場合）、感染性疾患、重度の精神性疾患", "score": 20, "scoreCondition": null },
-      { "optionId": 2, "text": "居宅内療養<br/>常時安静を要する（通院等を必要とする病状にあり、医師から安静又は安静に近い療養を指示されている）", "score": 14, "scoreCondition": null },
-      { "optionId": 2, "text": "居宅内療養<br/>上記のいずれにも該当しないが、児童の保育に支障がある", "score": 11, "scoreCondition": null }
+      { "optionId": 3, "text": "居宅内療養<br/>常時安静を要する（通院等を必要とする病状にあり、医師から安静又は安静に近い療養を指示されている）", "score": 14, "scoreCondition": null },
+      { "optionId": 4, "text": "居宅内療養<br/>上記のいずれにも該当しないが、児童の保育に支障がある", "score": 11, "scoreCondition": null }
     ],
     "description": null,
     "url": null,
@@ -176,7 +176,8 @@
       { "optionId": 9, "text": "就学が内定している", "score": 0, "scoreCondition": null },
       { "optionId": 10, "text": "火災等による家屋の損傷、その他災害復旧のため保育に当たれない", "score": 20, "scoreCondition": null },
       { "optionId": 11, "text": "ほか、児童福祉の観点から社会的な養護が必要な場合等、明らかに保育が必要と認められる場合（※）", "score": 2, "scoreCondition": null },
-      { "optionId": 12, "text": "上記に該当しないが、保育を必要としている", "score": 0, "scoreCondition": null }
+      { "optionId": 12, "text": "不存在、ひとり親世帯である", "score": 20, "scoreCondition": null },
+      { "optionId": 13, "text": "上記のいづれにも該当しないが、保育を必要としている", "score": 0, "scoreCondition": null }
     ],
     "description": "（＊）身体障害者手帳／愛の手帳（療育手帳）／精神障害者保健福祉手帳 <br/> （※）保育課にお問い合わせください",
     "url": null,
@@ -201,7 +202,7 @@
     "description": "保護者が保育をできない時間で判断するため、就労時間は休憩時間を含めた時間で判断します。ただし、居宅内就労の場合は実労働時間とし、休憩時間を含みません。",
     "url": null,
     "displayCondition": {
-      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [1] }],
+      "conditions": [{ "questionId": 9, "condition": "includes", "answers": [1] }],
       "logic": "OR"
     }
   },
@@ -213,18 +214,18 @@
       { "optionId": 1, "text": "月20日以上の就労（１日８時間以上又は月160時間以上の就労内定）", "score": 14, "scoreCondition": null },
       { "optionId": 2, "text": "月20日以上の就労（１日６時間以上８時間未満の就労内定）", "score": 11, "scoreCondition": null },
       { "optionId": 3, "text": "月20日以上の就労（１日４時間以上６時間未満の就労内定）", "score": 8, "scoreCondition": null },
-      { "optionId": 1, "text": "月16日以上の就労（１日８時間以上又は月160時間以上の就労内定）", "score": 11, "scoreCondition": null },
-      { "optionId": 2, "text": "月16日以上の就労（１日６時間以上８時間未満の就労内定）", "score": 8, "scoreCondition": null },
-      { "optionId": 3, "text": "月16日以上の就労（１日４時間以上６時間未満の就労内定）", "score": 5, "scoreCondition": null },
-      { "optionId": 1, "text": "月12日以上の就労（１日８時間以上又は月160時間以上の就労内定）", "score": 8, "scoreCondition": null },
-      { "optionId": 2, "text": "月12日以上の就労（１日６時間以上８時間未満の就労内定）", "score": 5, "scoreCondition": null },
-      { "optionId": 3, "text": "月12日以上の就労（１日４時間以上６時間未満の就労内定）", "score": 2, "scoreCondition": null },
-      { "optionId": 9, "text": "上記に該当しないが、月４８時間以上の就労内定", "score": 2, "scoreCondition": null }      
+      { "optionId": 4, "text": "月16日以上の就労（１日８時間以上又は月160時間以上の就労内定）", "score": 11, "scoreCondition": null },
+      { "optionId": 5, "text": "月16日以上の就労（１日６時間以上８時間未満の就労内定）", "score": 8, "scoreCondition": null },
+      { "optionId": 6, "text": "月16日以上の就労（１日４時間以上６時間未満の就労内定）", "score": 5, "scoreCondition": null },
+      { "optionId": 7, "text": "月12日以上の就労（１日８時間以上又は月160時間以上の就労内定）", "score": 8, "scoreCondition": null },
+      { "optionId": 8, "text": "月12日以上の就労（１日６時間以上８時間未満の就労内定）", "score": 5, "scoreCondition": null },
+      { "optionId": 9, "text": "月12日以上の就労（１日４時間以上６時間未満の就労内定）", "score": 2, "scoreCondition": null },
+      { "optionId": 10, "text": "上記に該当しないが、月４８時間以上の就労内定", "score": 2, "scoreCondition": null }      
     ],
     "description": "保護者が保育をできない時間で判断するため、就労時間は休憩時間を含めた時間で判断します。ただし、居宅内就労の場合は実労働時間とし、休憩時間を含みません。",
     "url": null,
     "displayCondition": {
-      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [2] }],
+      "conditions": [{ "questionId": 9, "condition": "includes", "answers": [2] }],
       "logic": "OR"
     }
   },
@@ -235,13 +236,13 @@
     "options": [
       { "optionId": 1, "text": "入院(概ね1か月以上にわたり、入院又は入院を予定している）", "score": 22, "scoreCondition": null },
       { "optionId": 2, "text": "居宅内療養<br/>常時病臥（概ね1か月以上、1日の大半を病床に臥し、原則医師の診療を継続して受けている場合）、感染性疾患、重度の精神性疾患", "score": 20, "scoreCondition": null },
-      { "optionId": 2, "text": "居宅内療養<br/>常時安静を要する（通院等を必要とする病状にあり、医師から安静又は安静に近い療養を指示されている）", "score": 14, "scoreCondition": null },
-      { "optionId": 2, "text": "居宅内療養<br/>上記のいずれにも該当しないが、児童の保育に支障がある", "score": 11, "scoreCondition": null }
+      { "optionId": 3, "text": "居宅内療養<br/>常時安静を要する（通院等を必要とする病状にあり、医師から安静又は安静に近い療養を指示されている）", "score": 14, "scoreCondition": null },
+      { "optionId": 4, "text": "居宅内療養<br/>上記のいずれにも該当しないが、児童の保育に支障がある", "score": 11, "scoreCondition": null }
     ],
     "description": null,
     "url": null,
     "displayCondition": {
-      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [4] }],
+      "conditions": [{ "questionId": 9, "condition": "includes", "answers": [4] }],
       "logic": "OR"
     }
   },
@@ -257,7 +258,7 @@
     "description": null,
     "url": null,
     "displayCondition": {
-      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [5] }],
+      "conditions": [{ "questionId": 9, "condition": "includes", "answers": [5] }],
       "logic": "OR"
     }
   },
@@ -279,7 +280,7 @@
     "description": null,
     "url": null,
     "displayCondition": {
-      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [6] }],
+      "conditions": [{ "questionId": 9, "condition": "includes", "answers": [6] }],
       "logic": "OR"
     }
   },
@@ -298,7 +299,7 @@
     "description": null,
     "url": null,
     "displayCondition": {
-      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [8] }],
+      "conditions": [{ "questionId": 9, "condition": "includes", "answers": [8] }],
       "logic": "OR"
     }
   },
