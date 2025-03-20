@@ -1,0 +1,576 @@
+[
+  {
+    "id": 1,
+    "sender": "bot",
+    "text": "1人目の保護者の状況を教えてください",
+    "options": [
+      { "optionId": 1, "text": "就労している", "score": 0, "scoreCondition": null },
+      { "optionId": 2, "text": "就労が内定している", "score": 0, "scoreCondition": null },
+      { "optionId": 3, "text": "出産（出産予定月の２か月前（多胎児妊娠の場合は4か月前）から認定期間満了日まで） ", "score": 12, "scoreCondition": null },
+      { "optionId": 4, "text": "疾病で保育にあたれない常態にある", "score": 0, "scoreCondition": null },
+      { "optionId": 5, "text": "障害があり、いずれかの手帳（＊）を持っている", "score": 0, "scoreCondition": null },
+      { "optionId": 6, "text": "介護もしくは看護をしている", "score": 0, "scoreCondition": null },
+      { "optionId": 7, "text": "求職活動のため、外出を常態としている", "score": 2, "scoreCondition": null },
+      { "optionId": 8, "text": "就学している", "score": 0, "scoreCondition": null },
+      { "optionId": 9, "text": "就学が内定している", "score": 0, "scoreCondition": null },
+      { "optionId": 10, "text": "火災等による家屋の損傷、その他災害復旧のため保育に当たれない", "score": 20, "scoreCondition": null },
+      { "optionId": 11, "text": "ほか、児童福祉の観点から社会的な養護が必要な場合等、明らかに保育が必要と認められる場合（※）", "score": 2, "scoreCondition": null },
+      { "optionId": 12, "text": "上記に該当しないが、保育を必要としている", "score": 0, "scoreCondition": null }
+    ],
+    "description": "（＊）身体障害者手帳／愛の手帳（療育手帳）／精神障害者保健福祉手帳 <br/> （※）保育課にお問い合わせください",
+    "url": null,
+    "displayCondition": null
+  },
+  {
+    "id": 2,
+    "sender": "bot",
+    "text": "1人目の保護者の就労時間はどれくらいですか？",
+    "options": [
+      { "optionId": 1, "text": "月20日以上の就労（１日８時間以上又は月160時間以上の就労を常態としている）", "score": 20, "scoreCondition": null },
+      { "optionId": 2, "text": "月20日以上の就労（１日６時間以上８時間未満の就労を常態としている）", "score": 17, "scoreCondition": null },
+      { "optionId": 3, "text": "月20日以上の就労（１日４時間以上６時間未満の就労を常態としている）", "score": 14, "scoreCondition": null },
+      { "optionId": 4, "text": "月16日以上の就労（１日８時間以上又は月160時間以上の就労を常態としている）", "score": 17, "scoreCondition": null },
+      { "optionId": 5, "text": "月16日以上の就労（１日６時間以上８時間未満の就労を常態としている）", "score": 14, "scoreCondition": null },
+      { "optionId": 6, "text": "月16日以上の就労（１日４時間以上６時間未満の就労を常態としている）", "score": 11, "scoreCondition": null },
+      { "optionId": 7, "text": "月12日以上の就労（１日８時間以上又は月160時間以上の就労を常態としている）", "score": 14, "scoreCondition": null },
+      { "optionId": 8, "text": "月12日以上の就労（１日６時間以上８時間未満の就労を常態としている）", "score": 11, "scoreCondition": null },
+      { "optionId": 9, "text": "月12日以上の就労（１日４時間以上６時間未満の就労を常態としている）", "score": 8, "scoreCondition": null },
+      { "optionId": 10, "text": "上記に該当しないが、月４８時間以上の就労を常態としている", "score": 8, "scoreCondition": null }      
+    ],
+    "description": "保護者が保育をできない時間で判断するため、就労時間は休憩時間を含めた時間で判断します。ただし、居宅内就労の場合は実労働時間とし、休憩時間を含みません。",
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [1] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 3,
+    "sender": "bot",
+    "text": "1人目の保護者の就労内定は、時間はどれくらいですか？",
+    "options": [
+      { "optionId": 1, "text": "月20日以上の就労（１日８時間以上又は月160時間以上の就労内定）", "score": 14, "scoreCondition": null },
+      { "optionId": 2, "text": "月20日以上の就労（１日６時間以上８時間未満の就労内定）", "score": 11, "scoreCondition": null },
+      { "optionId": 3, "text": "月20日以上の就労（１日４時間以上６時間未満の就労内定）", "score": 8, "scoreCondition": null },
+      { "optionId": 1, "text": "月16日以上の就労（１日８時間以上又は月160時間以上の就労内定）", "score": 11, "scoreCondition": null },
+      { "optionId": 2, "text": "月16日以上の就労（１日６時間以上８時間未満の就労内定）", "score": 8, "scoreCondition": null },
+      { "optionId": 3, "text": "月16日以上の就労（１日４時間以上６時間未満の就労内定）", "score": 5, "scoreCondition": null },
+      { "optionId": 1, "text": "月12日以上の就労（１日８時間以上又は月160時間以上の就労内定）", "score": 8, "scoreCondition": null },
+      { "optionId": 2, "text": "月12日以上の就労（１日６時間以上８時間未満の就労内定）", "score": 5, "scoreCondition": null },
+      { "optionId": 3, "text": "月12日以上の就労（１日４時間以上６時間未満の就労内定）", "score": 2, "scoreCondition": null },
+      { "optionId": 9, "text": "上記に該当しないが、月４８時間以上の就労内定", "score": 2, "scoreCondition": null }      
+    ],
+    "description": "保護者が保育をできない時間で判断するため、就労時間は休憩時間を含めた時間で判断します。ただし、居宅内就労の場合は実労働時間とし、休憩時間を含みません。",
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 4,
+    "sender": "bot",
+    "text": "1人目の保護者の疾病状況について教えてください",
+    "options": [
+      { "optionId": 1, "text": "入院(概ね1か月以上にわたり、入院又は入院を予定している）", "score": 22, "scoreCondition": null },
+      { "optionId": 2, "text": "居宅内療養<br/>常時病臥（概ね1か月以上、1日の大半を病床に臥し、原則医師の診療を継続して受けている場合）、感染性疾患、重度の精神性疾患", "score": 20, "scoreCondition": null },
+      { "optionId": 2, "text": "居宅内療養<br/>常時安静を要する（通院等を必要とする病状にあり、医師から安静又は安静に近い療養を指示されている）", "score": 14, "scoreCondition": null },
+      { "optionId": 2, "text": "居宅内療養<br/>上記のいずれにも該当しないが、児童の保育に支障がある", "score": 11, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [4] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 5,
+    "sender": "bot",
+    "text": "1人目の保護者がお持ちの手帳はどれですが？",
+    "options": [
+      { "optionId": 1, "text": "身体障害者手帳１～２級、愛の手帳１～３度、精神障害者保健福祉手帳１～３級", "score": 20, "scoreCondition": null },
+      { "optionId": 2, "text": "身体障害者手帳３級、愛の手帳４度", "score": 14, "scoreCondition": null },
+      { "optionId": 3, "text": "身体障害者手帳４級", "score": 8, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [5] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 6,
+    "sender": "bot",
+    "text": "1人目の保護者の介護・看護状況を教えてください",
+    "options": [
+      { "optionId": 1, "text": "月20日以上の介護・看護（１日８時間以上の介護・看護）", "score": 17, "scoreCondition": null },
+      { "optionId": 2, "text": "月20日以上の介護・看護（１日６時間以上８時間未満の介護・看護）", "score": 14, "scoreCondition": null },
+      { "optionId": 3, "text": "月20日以上の介護・看護（１日４時間以上６時間未満の介護・看護）", "score": 11, "scoreCondition": null },
+      { "optionId": 4, "text": "月16日以上の介護・看護（１日８時間以上の介護・看護）", "score": 14, "scoreCondition": null },
+      { "optionId": 5, "text": "月16日以上の介護・看護（１日６時間以上８時間未満の介護・看護）", "score": 11, "scoreCondition": null },
+      { "optionId": 6, "text": "月16日以上の介護・看護（１日４時間以上６時間未満の介護・看護）", "score": 8, "scoreCondition": null },
+      { "optionId": 7, "text": "月12日以上の介護・看護（１日８時間以上の介護・看護）", "score": 11, "scoreCondition": null },
+      { "optionId": 8, "text": "月12日以上の介護・看護（１日６時間以上８時間未満の介護・看護）", "score": 8, "scoreCondition": null },
+      { "optionId": 9, "text": "月12日以上の介護・看護（１日４時間以上６時間未満の介護・看護）", "score": 5, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [6] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 7,
+    "sender": "bot",
+    "text": "1人目の保護者の就学状況を教えてください",
+    "options": [
+      { "optionId": 1, "text": "月20日以上の就学（１日８時間以上の就学）", "score": 17, "scoreCondition": null },
+      { "optionId": 2, "text": "月20日以上の就学（１日６時間以上８時間未満の就学）", "score": 14, "scoreCondition": null },
+      { "optionId": 3, "text": "月20日以上の就学（１日４時間以上６時間未満の就学）", "score": 11, "scoreCondition": null },
+      { "optionId": 4, "text": "月16日以上の就学（１日８時間以上の就学）", "score": 14, "scoreCondition": null },
+      { "optionId": 5, "text": "月16日以上の就学（１日６時間以上８時間未満の就学）", "score": 11, "scoreCondition": null },
+      { "optionId": 6, "text": "月16日以上の就学（１日４時間以上６時間未満の就学）", "score": 8, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [8] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 8,
+    "sender": "bot",
+    "text": "1人目の保護者の就学内定状況を教えてください",
+    "options": [
+      { "optionId": 1, "text": "月20日以上の就学内定（１日８時間以上の就学内定）", "score": 17, "scoreCondition": null },
+      { "optionId": 2, "text": "月20日以上の就学内定（１日６時間以上８時間未満の就学内定）", "score": 14, "scoreCondition": null },
+      { "optionId": 3, "text": "月20日以上の就学内定（１日４時間以上６時間未満の就学内定）", "score": 11, "scoreCondition": null },
+      { "optionId": 4, "text": "月16日以上の就学内定（１日８時間以上の就学内定）", "score": 14, "scoreCondition": null },
+      { "optionId": 5, "text": "月16日以上の就学内定（１日６時間以上８時間未満の就学内定）", "score": 11, "scoreCondition": null },
+      { "optionId": 6, "text": "月16日以上の就学内定（１日４時間以上６時間未満の就学内定）", "score": 8, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [9] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 9,
+    "sender": "bot",
+    "text": "2人目の保護者の状況を教えてください",
+    "options": [
+      { "optionId": 1, "text": "就労している", "score": 0, "scoreCondition": null },
+      { "optionId": 2, "text": "就労が内定している", "score": 0, "scoreCondition": null },
+      { "optionId": 3, "text": "出産（出産予定月の２か月前（多胎児妊娠の場合は4か月前）から認定期間満了日まで） ", "score": 12, "scoreCondition": null },
+      { "optionId": 4, "text": "疾病で保育にあたれない常態にある", "score": 0, "scoreCondition": null },
+      { "optionId": 5, "text": "障害があり、いずれかの手帳（＊）を持っている", "score": 0, "scoreCondition": null },
+      { "optionId": 6, "text": "介護もしくは看護をしている", "score": 0, "scoreCondition": null },
+      { "optionId": 7, "text": "求職活動のため、外出を常態としている", "score": 2, "scoreCondition": null },
+      { "optionId": 8, "text": "就学している", "score": 0, "scoreCondition": null },
+      { "optionId": 9, "text": "就学が内定している", "score": 0, "scoreCondition": null },
+      { "optionId": 10, "text": "火災等による家屋の損傷、その他災害復旧のため保育に当たれない", "score": 20, "scoreCondition": null },
+      { "optionId": 11, "text": "ほか、児童福祉の観点から社会的な養護が必要な場合等、明らかに保育が必要と認められる場合（※）", "score": 2, "scoreCondition": null },
+      { "optionId": 12, "text": "上記に該当しないが、保育を必要としている", "score": 0, "scoreCondition": null }
+    ],
+    "description": "（＊）身体障害者手帳／愛の手帳（療育手帳）／精神障害者保健福祉手帳 <br/> （※）保育課にお問い合わせください",
+    "url": null,
+    "displayCondition": null
+  },
+  {
+    "id": 10,
+    "sender": "bot",
+    "text": "2人目の保護者の就労時間はどれくらいですか？",
+    "options": [
+      { "optionId": 1, "text": "月20日以上の就労（１日８時間以上又は月160時間以上の就労を常態としている）", "score": 20, "scoreCondition": null },
+      { "optionId": 2, "text": "月20日以上の就労（１日６時間以上８時間未満の就労を常態としている）", "score": 17, "scoreCondition": null },
+      { "optionId": 3, "text": "月20日以上の就労（１日４時間以上６時間未満の就労を常態としている）", "score": 14, "scoreCondition": null },
+      { "optionId": 4, "text": "月16日以上の就労（１日８時間以上又は月160時間以上の就労を常態としている）", "score": 17, "scoreCondition": null },
+      { "optionId": 5, "text": "月16日以上の就労（１日６時間以上８時間未満の就労を常態としている）", "score": 14, "scoreCondition": null },
+      { "optionId": 6, "text": "月16日以上の就労（１日４時間以上６時間未満の就労を常態としている）", "score": 11, "scoreCondition": null },
+      { "optionId": 7, "text": "月12日以上の就労（１日８時間以上又は月160時間以上の就労を常態としている）", "score": 14, "scoreCondition": null },
+      { "optionId": 8, "text": "月12日以上の就労（１日６時間以上８時間未満の就労を常態としている）", "score": 11, "scoreCondition": null },
+      { "optionId": 9, "text": "月12日以上の就労（１日４時間以上６時間未満の就労を常態としている）", "score": 8, "scoreCondition": null },
+      { "optionId": 10, "text": "上記に該当しないが、月４８時間以上の就労を常態としている", "score": 8, "scoreCondition": null }      
+    ],
+    "description": "保護者が保育をできない時間で判断するため、就労時間は休憩時間を含めた時間で判断します。ただし、居宅内就労の場合は実労働時間とし、休憩時間を含みません。",
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [1] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 11,
+    "sender": "bot",
+    "text": "2人目の保護者の就労内定は、時間はどれくらいですか？",
+    "options": [
+      { "optionId": 1, "text": "月20日以上の就労（１日８時間以上又は月160時間以上の就労内定）", "score": 14, "scoreCondition": null },
+      { "optionId": 2, "text": "月20日以上の就労（１日６時間以上８時間未満の就労内定）", "score": 11, "scoreCondition": null },
+      { "optionId": 3, "text": "月20日以上の就労（１日４時間以上６時間未満の就労内定）", "score": 8, "scoreCondition": null },
+      { "optionId": 1, "text": "月16日以上の就労（１日８時間以上又は月160時間以上の就労内定）", "score": 11, "scoreCondition": null },
+      { "optionId": 2, "text": "月16日以上の就労（１日６時間以上８時間未満の就労内定）", "score": 8, "scoreCondition": null },
+      { "optionId": 3, "text": "月16日以上の就労（１日４時間以上６時間未満の就労内定）", "score": 5, "scoreCondition": null },
+      { "optionId": 1, "text": "月12日以上の就労（１日８時間以上又は月160時間以上の就労内定）", "score": 8, "scoreCondition": null },
+      { "optionId": 2, "text": "月12日以上の就労（１日６時間以上８時間未満の就労内定）", "score": 5, "scoreCondition": null },
+      { "optionId": 3, "text": "月12日以上の就労（１日４時間以上６時間未満の就労内定）", "score": 2, "scoreCondition": null },
+      { "optionId": 9, "text": "上記に該当しないが、月４８時間以上の就労内定", "score": 2, "scoreCondition": null }      
+    ],
+    "description": "保護者が保育をできない時間で判断するため、就労時間は休憩時間を含めた時間で判断します。ただし、居宅内就労の場合は実労働時間とし、休憩時間を含みません。",
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 12,
+    "sender": "bot",
+    "text": "2人目の保護者の疾病状況について教えてください",
+    "options": [
+      { "optionId": 1, "text": "入院(概ね1か月以上にわたり、入院又は入院を予定している）", "score": 22, "scoreCondition": null },
+      { "optionId": 2, "text": "居宅内療養<br/>常時病臥（概ね1か月以上、1日の大半を病床に臥し、原則医師の診療を継続して受けている場合）、感染性疾患、重度の精神性疾患", "score": 20, "scoreCondition": null },
+      { "optionId": 2, "text": "居宅内療養<br/>常時安静を要する（通院等を必要とする病状にあり、医師から安静又は安静に近い療養を指示されている）", "score": 14, "scoreCondition": null },
+      { "optionId": 2, "text": "居宅内療養<br/>上記のいずれにも該当しないが、児童の保育に支障がある", "score": 11, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [4] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 13,
+    "sender": "bot",
+    "text": "2人目の保護者がお持ちの手帳はどれですが？",
+    "options": [
+      { "optionId": 1, "text": "身体障害者手帳１～２級、愛の手帳１～３度、精神障害者保健福祉手帳１～３級", "score": 20, "scoreCondition": null },
+      { "optionId": 2, "text": "身体障害者手帳３級、愛の手帳４度", "score": 14, "scoreCondition": null },
+      { "optionId": 3, "text": "身体障害者手帳４級", "score": 8, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [5] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 14,
+    "sender": "bot",
+    "text": "2人目の保護者の介護・看護状況を教えてください",
+    "options": [
+      { "optionId": 1, "text": "月20日以上の介護・看護（１日８時間以上の介護・看護）", "score": 17, "scoreCondition": null },
+      { "optionId": 2, "text": "月20日以上の介護・看護（１日６時間以上８時間未満の介護・看護）", "score": 14, "scoreCondition": null },
+      { "optionId": 3, "text": "月20日以上の介護・看護（１日４時間以上６時間未満の介護・看護）", "score": 11, "scoreCondition": null },
+      { "optionId": 4, "text": "月16日以上の介護・看護（１日８時間以上の介護・看護）", "score": 14, "scoreCondition": null },
+      { "optionId": 5, "text": "月16日以上の介護・看護（１日６時間以上８時間未満の介護・看護）", "score": 11, "scoreCondition": null },
+      { "optionId": 6, "text": "月16日以上の介護・看護（１日４時間以上６時間未満の介護・看護）", "score": 8, "scoreCondition": null },
+      { "optionId": 7, "text": "月12日以上の介護・看護（１日８時間以上の介護・看護）", "score": 11, "scoreCondition": null },
+      { "optionId": 8, "text": "月12日以上の介護・看護（１日６時間以上８時間未満の介護・看護）", "score": 8, "scoreCondition": null },
+      { "optionId": 9, "text": "月12日以上の介護・看護（１日４時間以上６時間未満の介護・看護）", "score": 5, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [6] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 15,
+    "sender": "bot",
+    "text": "2人目の保護者の就学状況を教えてください",
+    "options": [
+      { "optionId": 1, "text": "月20日以上の就学（１日８時間以上の就学）", "score": 17, "scoreCondition": null },
+      { "optionId": 2, "text": "月20日以上の就学（１日６時間以上８時間未満の就学）", "score": 14, "scoreCondition": null },
+      { "optionId": 3, "text": "月20日以上の就学（１日４時間以上６時間未満の就学）", "score": 11, "scoreCondition": null },
+      { "optionId": 4, "text": "月16日以上の就学（１日８時間以上の就学）", "score": 14, "scoreCondition": null },
+      { "optionId": 5, "text": "月16日以上の就学（１日６時間以上８時間未満の就学）", "score": 11, "scoreCondition": null },
+      { "optionId": 6, "text": "月16日以上の就学（１日４時間以上６時間未満の就学）", "score": 8, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [8] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 16,
+    "sender": "bot",
+    "text": "2人目の保護者の就学内定状況を教えてください",
+    "options": [
+      { "optionId": 1, "text": "月20日以上の就学内定（１日８時間以上の就学内定）", "score": 17, "scoreCondition": null },
+      { "optionId": 2, "text": "月20日以上の就学内定（１日６時間以上８時間未満の就学内定）", "score": 14, "scoreCondition": null },
+      { "optionId": 3, "text": "月20日以上の就学内定（１日４時間以上６時間未満の就学内定）", "score": 11, "scoreCondition": null },
+      { "optionId": 4, "text": "月16日以上の就学内定（１日８時間以上の就学内定）", "score": 14, "scoreCondition": null },
+      { "optionId": 5, "text": "月16日以上の就学内定（１日６時間以上８時間未満の就学内定）", "score": 11, "scoreCondition": null },
+      { "optionId": 6, "text": "月16日以上の就学内定（１日４時間以上６時間未満の就学内定）", "score": 8, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [9] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 17,
+    "sender": "bot",
+    "text": "希望する認可保育園等に入園できない場合、育児休業の延長も許容できまずか？",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": -40, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+    ],
+    "description": "該当する場合、他の調整指数は適用しません",
+    "url": null,
+    "displayCondition": null
+  },
+  {
+    "id": 18,
+    "sender": "bot",
+    "text": "生活保護受給世帯ですか？",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": 8, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 17, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 19,
+    "sender": "bot",
+    "text": "両親が死亡・拘禁・行方不明などの理由で不存在の世帯ですか？",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": 8, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 17, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 20,
+    "sender": "bot",
+    "text": "生計中心者が失業し、就労内定の状態、又は求職のため外出が常態となっている世帯ですか？（ひとり親世帯は除く）",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": 3, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 17, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 21,
+    "sender": "bot",
+    "text": "新規入園申込みのひとり親世帯ですか？",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": 2, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 17, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 22,
+    "sender": "bot",
+    "text": "申込児童又は同居の児童に障害がありますか？（新規入園申込児童に限る） ",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": 2, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+    ],
+    "description": "※障害のある同居児童が18歳に達する日以降、最初の3月31日まで適用します。",
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 17, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 23,
+    "sender": "bot",
+    "text": "兄弟姉妹（双子以上含む）が同時に新規の入園申込みをする世帯、又は兄弟姉妹(双子以上含む。卒園・退園予定児を除く)が在籍している認可保育園等に新規の入園申込みをする世帯ですか？",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": 1, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+    ],
+    "description": "※同時に新規の入園申込みをする場合は、希望園が同じ園に限ります。<br/>※在籍している兄弟姉妹が転園申込みしている場合、新規に入園申込みをする希望園が、兄弟姉妹の在籍している園又は転園希望園と同じ園の場合のみ、当該園の選考に限り適用します。",
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 17, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 24,
+    "sender": "bot",
+    "text": "双子以上の申込みである世帯ですか？（新規入園申込み児童に限る）",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": 1, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 17, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 25,
+    "sender": "bot",
+    "text": "内定発表日の属する月以前の3か月以内にひとり親となり、就労内定の状態、又は求職活動をする世帯ですか？（新規入園申込児童に限る）",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": 3, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 17, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 26,
+    "sender": "bot",
+    "text": "自宅での自営業で危険なものを扱う業種であり、子どもを見ながら就労していますか？",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": 1, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 17, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 27,
+    "sender": "bot",
+    "text": "同一世帯内に保育の必要性の認定を受けていない児童がいますか？",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": -1, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+    ],
+    "description": "※同一世帯内に認可保育園等の入園申込みをしていないものの、子どものための教育・保育給付認定（2号・3号）又は子育てのための施設等利用給付認定（2号・3号）を受けている児童、入園申込可能月齢に達しない児童、介護・看護の対象児童は除きます。",
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 17, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 28,
+    "sender": "bot",
+    "text": "自宅又は被介護者の自宅で要介護３～５、身体障害者手帳１～２級若しくは愛の手帳１～２度の親族を介護・看護していますか？",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": 3, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+    ],
+    "description": "※保育が必要な事由が「介護・看護」の人に適用します",
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 17, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 29,
+    "sender": "bot",
+    "text": "父母ともに大使館関係職員等で就労の資格を有する査証・資格外活動許可書のない世帯ですか？",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": -3, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 17, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 30,
+    "sender": "bot",
+    "text": "父母を除く同居の親族に保育に当たれる人がいますか？",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": -3, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 17, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 31,
+    "sender": "bot",
+    "text": "港区外在住で、保護者の一方又は双方が港区内の勤務地に通勤していますか？（港区への転入予定を除く）",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": -9, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 17, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 32,
+    "sender": "bot",
+    "text": "正当な理由なく保育料等を納期限から３か月以上滞納していますか？(卒園児・退園児を含む)",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": -20, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+    ],
+    "description": "※結果発表日の属する月の1日で判断します",
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 17, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 33,
+    "sender": "bot",
+    "text": "保育施設に保育士又は看護師の有資格者として就労内定していますか？（１年以上勤務が決定していること）",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": 6, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 17, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  }
+]
