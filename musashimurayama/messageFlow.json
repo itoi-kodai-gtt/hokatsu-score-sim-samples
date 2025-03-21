@@ -1,0 +1,832 @@
+[
+  {
+    "id": 1,
+    "sender": "bot",
+    "text": "基本指数の計算を行います。<br/><br/>まず、父親の状況を教えてください",
+    "options": [
+      { "optionId": 1, "text": "居宅外労働または居宅内労働", "score": 0, "scoreCondition": null },
+      { "optionId": 2, "text": "妊娠中または出産後間がない", "score": 35, "scoreCondition": null },
+      { "optionId": 3, "text": "疾病・負傷または精神・身体の障害", "score": 0, "scoreCondition": null },
+      { "optionId": 4, "text": "常時介護または看護", "score": 0, "scoreCondition": null },
+      { "optionId": 5, "text": "災害による家屋の損傷その他災害の復旧のため", "score": 50, "scoreCondition": null },
+      { "optionId": 6, "text": "求職中", "score": 0, "scoreCondition": null },
+      { "optionId": 7, "text": "学校等に通学中", "score": 12, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": null
+  },
+  {
+    "id": 2,
+    "sender": "bot",
+    "text": "就労状況についてお伺いします。以下のうち、通常当てはまる就労日数を選んでください。",
+    "options": [
+      { "optionId": 1, "text": "週5日以上", "score": 0, "scoreCondition": null },
+      { "optionId": 2, "text": "週4日以上", "score": 0, "scoreCondition": null },
+      { "optionId": 3, "text": "週3日以上", "score": 0, "scoreCondition": null },
+      { "optionId": 4, "text": "上記以外で月48時間以上就労している", "score": 15, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [1] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 3,
+    "sender": "bot",
+    "text": "通常当てはまる就労時間を選んでください。",
+    "options": [
+      { "optionId": 1, "text": "1日8時間以上", "score": 50, "scoreCondition": null },
+      { "optionId": 2, "text": "1日7時間以上8時間未満", "score": 45, "scoreCondition": null },
+      { "optionId": 3, "text": "1日6時間以上7時間未満", "score": 40, "scoreCondition": null },
+      { "optionId": 4, "text": "1日4時間以上6時間未満", "score": 35, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 2, "condition": "includes", "answers": [1] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 4,
+    "sender": "bot",
+    "text": "通常当てはまる就労時間を選んでください。",
+    "options": [
+      { "optionId": 1, "text": "1日8時間以上", "score": 40, "scoreCondition": null },
+      { "optionId": 2, "text": "1日7時間以上8時間未満", "score": 35, "scoreCondition": null },
+      { "optionId": 3, "text": "1日6時間以上7時間未満", "score": 30, "scoreCondition": null },
+      { "optionId": 4, "text": "1日4時間以上6時間未満", "score": 25, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 2, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 5,
+    "sender": "bot",
+    "text": "通常当てはまる就労時間を選んでください。",
+    "options": [
+      { "optionId": 1, "text": "1日8時間以上", "score": 35, "scoreCondition": null },
+      { "optionId": 2, "text": "1日7時間以上8時間未満", "score": 30, "scoreCondition": null },
+      { "optionId": 3, "text": "1日6時間以上7時間未満", "score": 25, "scoreCondition": null },
+      { "optionId": 4, "text": "1日4時間以上6時間未満", "score": 20, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 2, "condition": "includes", "answers": [3] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 6,
+    "sender": "bot",
+    "text": "疾病・負傷または精神・身体の障害の状況について伺います。<br/><br/>状況は主に以下のどちらですか？",
+    "options": [
+      { "optionId": 1, "text": "疾病または負傷", "score": 0, "scoreCondition": null },
+      { "optionId": 2, "text": "精神または身体の障害", "score": 0, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [3] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 7,
+    "sender": "bot",
+    "text": "疾病または負傷の状況は以下のどれに当てはまりますか？",
+    "options": [
+      { "optionId": 1, "text": "常時病臥または概ね1月以上入院（予定含む）", "score": 50, "scoreCondition": null },
+      { "optionId": 2, "text": "一般療養（週3日以上の通院を常態）", "score": 30, "scoreCondition": null },
+      { "optionId": 3, "text": "精神性疾患、感染症または特殊疾病にり患", "score": 20, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 6, "condition": "includes", "answers": [1] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 8,
+    "sender": "bot",
+    "text": "精神または身体の障害の状況は以下のどれに当てはまりますか？",
+    "options": [
+      { "optionId": 1, "text": "精神障害者保健福祉手帳1・2級、愛の手帳1・2度、身体障害者手帳1・2級", "score": 50, "scoreCondition": null },
+      { "optionId": 2, "text": "愛の手帳3・4度、身体障害者手帳3・4級", "score": 35, "scoreCondition": null },
+      { "optionId": 3, "text": "上記以外", "score": 20, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 6, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 9,
+    "sender": "bot",
+    "text": "常時介護または看護の状況についてお伺いします。<br/><br/>状況は主に以下のどちらですか？",
+    "options": [
+      { "optionId": 1, "text": "在宅介護または看護", "score": 0, "scoreCondition": null },
+      { "optionId": 2, "text": "病院等での介護または看護", "score": 0, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [4] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 10,
+    "sender": "bot",
+    "text": "介護・看護の対象者は以下のどの状況ですか？",
+    "options": [
+      { "optionId": 1, "text": "常時観察、介護・看護が必要（要介護認定5から3）", "score": 50, "scoreCondition": null },
+      { "optionId": 2, "text": "日常生活全般において恒常的な介護・看護が必要（要介護認定2から1）", "score": 35, "scoreCondition": null },
+      { "optionId": 3, "text": "上記以外", "score": 20, "scoreCondition": null }
+     ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 9, "condition": "includes", "answers": [1] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 11,
+    "sender": "bot",
+    "text": "介護・看護は以下のどの状況ですか？",
+    "options": [
+      { "optionId": 1, "text": "週5日以上、1日4時間以上親族を病院等で介護している", "score": 40, "scoreCondition": null },
+      { "optionId": 2, "text": "週4日以上、1日4時間以上親族を病院等で介護している", "score": 30, "scoreCondition": null },
+      { "optionId": 3, "text": "週3日以上、1日4時間以上親族を病院等で介護している", "score": 20, "scoreCondition": null }
+     ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 9, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 12,
+    "sender": "bot",
+    "text": "求職について、以下のいずれの状況に該当しますか？",
+    "options": [
+      { "optionId": 1, "text": "就労内定または事業を開始する予定", "score": 10, "scoreCondition": null },
+      { "optionId": 2, "text": "求職のため日中の外出を常態としている", "score": 5, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [6] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 13,
+    "sender": "bot",
+    "text": "通学の状況は以下のいずれに該当しますか？",
+    "options": [
+      { "optionId": 1, "text": "週5日以上", "score": 0, "scoreCondition": null },
+      { "optionId": 2, "text": "週4日以上", "score": 0, "scoreCondition": null },
+      { "optionId": 3, "text": "週3日以上", "score": 0, "scoreCondition": null },
+      { "optionId": 4, "text": "上記以外で月48時間以上", "score": 15, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [7] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 14,
+    "sender": "bot",
+    "text": "通常当てはまる就学時間を選んでください。",
+    "options": [
+      { "optionId": 1, "text": "1日8時間以上", "score": 50, "scoreCondition": null },
+      { "optionId": 2, "text": "1日7時間以上8時間未満", "score": 45, "scoreCondition": null },
+      { "optionId": 3, "text": "1日6時間以上7時間未満", "score": 40, "scoreCondition": null },
+      { "optionId": 4, "text": "1日4時間以上6時間未満", "score": 35, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 13, "condition": "includes", "answers": [1] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 15,
+    "sender": "bot",
+    "text": "通常当てはまる就学時間を選んでください。",
+    "options": [
+      { "optionId": 1, "text": "1日8時間以上", "score": 40, "scoreCondition": null },
+      { "optionId": 2, "text": "1日7時間以上8時間未満", "score": 35, "scoreCondition": null },
+      { "optionId": 3, "text": "1日6時間以上7時間未満", "score": 30, "scoreCondition": null },
+      { "optionId": 4, "text": "1日4時間以上6時間未満", "score": 25, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 13, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 16,
+    "sender": "bot",
+    "text": "通常当てはまる就学時間を選んでください。",
+    "options": [
+      { "optionId": 1, "text": "1日8時間以上", "score": 35, "scoreCondition": null },
+      { "optionId": 2, "text": "1日7時間以上8時間未満", "score": 30, "scoreCondition": null },
+      { "optionId": 3, "text": "1日6時間以上7時間未満", "score": 25, "scoreCondition": null },
+      { "optionId": 4, "text": "1日4時間以上6時間未満", "score": 20, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 14, "condition": "includes", "answers": [3] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 17,
+    "sender": "bot",
+    "text": "次に母親の状況を教えてください",
+    "options": [
+      { "optionId": 1, "text": "居宅外労働または居宅内労働", "score": 0, "scoreCondition": null },
+      { "optionId": 2, "text": "妊娠中または出産後間がない", "score": 35, "scoreCondition": null },
+      { "optionId": 3, "text": "疾病・負傷または精神・身体の障害", "score": 0, "scoreCondition": null },
+      { "optionId": 4, "text": "常時介護または看護", "score": 0, "scoreCondition": null },
+      { "optionId": 5, "text": "災害による家屋の損傷その他災害の復旧のため", "score": 50, "scoreCondition": null },
+      { "optionId": 6, "text": "求職中", "score": 0, "scoreCondition": null },
+      { "optionId": 7, "text": "学校等に通学中", "score": 12, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": null
+  },
+  {
+    "id": 18,
+    "sender": "bot",
+    "text": "就労状況についてお伺いします。以下のうち、通常当てはまる就労日数を選んでください。",
+    "options": [
+      { "optionId": 1, "text": "週5日以上", "score": 0, "scoreCondition": null },
+      { "optionId": 2, "text": "週4日以上", "score": 0, "scoreCondition": null },
+      { "optionId": 3, "text": "週3日以上", "score": 0, "scoreCondition": null },
+      { "optionId": 4, "text": "上記以外で月48時間以上就労している", "score": 15, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [1] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 19,
+    "sender": "bot",
+    "text": "通常当てはまる就労時間を選んでください。",
+    "options": [
+      { "optionId": 1, "text": "1日8時間以上", "score": 50, "scoreCondition": null },
+      { "optionId": 2, "text": "1日7時間以上8時間未満", "score": 45, "scoreCondition": null },
+      { "optionId": 3, "text": "1日6時間以上7時間未満", "score": 40, "scoreCondition": null },
+      { "optionId": 4, "text": "1日4時間以上6時間未満", "score": 35, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 2, "condition": "includes", "answers": [1] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 20,
+    "sender": "bot",
+    "text": "通常当てはまる就労時間を選んでください。",
+    "options": [
+      { "optionId": 1, "text": "1日8時間以上", "score": 40, "scoreCondition": null },
+      { "optionId": 2, "text": "1日7時間以上8時間未満", "score": 35, "scoreCondition": null },
+      { "optionId": 3, "text": "1日6時間以上7時間未満", "score": 30, "scoreCondition": null },
+      { "optionId": 4, "text": "1日4時間以上6時間未満", "score": 25, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 2, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 21,
+    "sender": "bot",
+    "text": "通常当てはまる就労時間を選んでください。",
+    "options": [
+      { "optionId": 1, "text": "1日8時間以上", "score": 35, "scoreCondition": null },
+      { "optionId": 2, "text": "1日7時間以上8時間未満", "score": 30, "scoreCondition": null },
+      { "optionId": 3, "text": "1日6時間以上7時間未満", "score": 25, "scoreCondition": null },
+      { "optionId": 4, "text": "1日4時間以上6時間未満", "score": 20, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 2, "condition": "includes", "answers": [3] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 22,
+    "sender": "bot",
+    "text": "疾病・負傷または精神・身体の障害の状況について伺います。<br/><br/>状況は主に以下のどちらですか？",
+    "options": [
+      { "optionId": 1, "text": "疾病または負傷", "score": 0, "scoreCondition": null },
+      { "optionId": 2, "text": "精神または身体の障害", "score": 0, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [3] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 23,
+    "sender": "bot",
+    "text": "疾病または負傷の状況は以下のどれに当てはまりますか？",
+    "options": [
+      { "optionId": 1, "text": "常時病臥または概ね1月以上入院（予定含む）", "score": 50, "scoreCondition": null },
+      { "optionId": 2, "text": "一般療養（週3日以上の通院を常態）", "score": 30, "scoreCondition": null },
+      { "optionId": 3, "text": "精神性疾患、感染症または特殊疾病にり患", "score": 20, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 6, "condition": "includes", "answers": [1] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 24,
+    "sender": "bot",
+    "text": "精神または身体の障害の状況は以下のどれに当てはまりますか？",
+    "options": [
+      { "optionId": 1, "text": "精神障害者保健福祉手帳1・2級、愛の手帳1・2度、身体障害者手帳1・2級", "score": 50, "scoreCondition": null },
+      { "optionId": 2, "text": "愛の手帳3・4度、身体障害者手帳3・4級", "score": 35, "scoreCondition": null },
+      { "optionId": 3, "text": "上記以外", "score": 20, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 6, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 25,
+    "sender": "bot",
+    "text": "常時介護または看護の状況についてお伺いします。<br/><br/>状況は主に以下のどちらですか？",
+    "options": [
+      { "optionId": 1, "text": "在宅介護または看護", "score": 0, "scoreCondition": null },
+      { "optionId": 2, "text": "病院等での介護または看護", "score": 0, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [4] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 26,
+    "sender": "bot",
+    "text": "介護・看護の対象者は以下のどの状況ですか？",
+    "options": [
+      { "optionId": 1, "text": "常時観察、介護・看護が必要（要介護認定5から3）", "score": 50, "scoreCondition": null },
+      { "optionId": 2, "text": "日常生活全般において恒常的な介護・看護が必要（要介護認定2から1）", "score": 35, "scoreCondition": null },
+      { "optionId": 3, "text": "上記以外", "score": 20, "scoreCondition": null }
+     ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 9, "condition": "includes", "answers": [1] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 27,
+    "sender": "bot",
+    "text": "介護・看護は以下のどの状況ですか？",
+    "options": [
+      { "optionId": 1, "text": "週5日以上、1日4時間以上親族を病院等で介護している", "score": 40, "scoreCondition": null },
+      { "optionId": 2, "text": "週4日以上、1日4時間以上親族を病院等で介護している", "score": 30, "scoreCondition": null },
+      { "optionId": 3, "text": "週3日以上、1日4時間以上親族を病院等で介護している", "score": 20, "scoreCondition": null }
+     ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 9, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 28,
+    "sender": "bot",
+    "text": "求職について、以下のいずれの状況に該当しますか？",
+    "options": [
+      { "optionId": 1, "text": "就労内定または事業を開始する予定", "score": 10, "scoreCondition": null },
+      { "optionId": 2, "text": "求職のため日中の外出を常態としている", "score": 5, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [6] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 29,
+    "sender": "bot",
+    "text": "通学の状況は以下のいずれに該当しますか？",
+    "options": [
+      { "optionId": 1, "text": "週5日以上", "score": 0, "scoreCondition": null },
+      { "optionId": 2, "text": "週4日以上", "score": 0, "scoreCondition": null },
+      { "optionId": 3, "text": "週3日以上", "score": 0, "scoreCondition": null },
+      { "optionId": 4, "text": "上記以外で月48時間以上", "score": 15, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [7] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 30,
+    "sender": "bot",
+    "text": "通常当てはまる就学時間を選んでください。",
+    "options": [
+      { "optionId": 1, "text": "1日8時間以上", "score": 50, "scoreCondition": null },
+      { "optionId": 2, "text": "1日7時間以上8時間未満", "score": 45, "scoreCondition": null },
+      { "optionId": 3, "text": "1日6時間以上7時間未満", "score": 40, "scoreCondition": null },
+      { "optionId": 4, "text": "1日4時間以上6時間未満", "score": 35, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 13, "condition": "includes", "answers": [1] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 31,
+    "sender": "bot",
+    "text": "通常当てはまる就学時間を選んでください。",
+    "options": [
+      { "optionId": 1, "text": "1日8時間以上", "score": 40, "scoreCondition": null },
+      { "optionId": 2, "text": "1日7時間以上8時間未満", "score": 35, "scoreCondition": null },
+      { "optionId": 3, "text": "1日6時間以上7時間未満", "score": 30, "scoreCondition": null },
+      { "optionId": 4, "text": "1日4時間以上6時間未満", "score": 25, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 13, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 32,
+    "sender": "bot",
+    "text": "通常当てはまる就学時間を選んでください。",
+    "options": [
+      { "optionId": 1, "text": "1日8時間以上", "score": 35, "scoreCondition": null },
+      { "optionId": 2, "text": "1日7時間以上8時間未満", "score": 30, "scoreCondition": null },
+      { "optionId": 3, "text": "1日6時間以上7時間未満", "score": 25, "scoreCondition": null },
+      { "optionId": 4, "text": "1日4時間以上6時間未満", "score": 20, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 14, "condition": "includes", "answers": [3] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 33,
+    "sender": "bot",
+    "text": "次に調整指数の計算を行います。<br/><br/>まず世帯の状況についてお伺いします<br/><br/>保護者のいずれかが保育従事者として保育所等に就労し、または就労する予定ですか？",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": 15, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+     ],
+    "description": null,
+    "url": null,
+    "displayCondition": null
+  },
+  {
+    "id": 34,
+    "sender": "bot",
+    "text": "父および母のいずれか又は両方が入所の申込児童と同居していますか？",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": 0, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 10, "scoreCondition": null }
+     ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 33, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 35,
+    "sender": "bot",
+    "text": "世帯の生計を維持するために就労していた保護者が失業し、当該保護者またはその他の保護者が速やかに就労することが必要ですか？",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": 10, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+     ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 34, "condition": "includes", "answers": [1] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 36,
+    "sender": "bot",
+    "text": "国外への単身赴任により、父または母のいずれかが申込児童と同居していませんか？",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": 5, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+     ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 35, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 37,
+    "sender": "bot",
+    "text": "生活保護法（昭和25年法律第144号）の規定による保護を受けていますか？",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": 5, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+     ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 36, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 38,
+    "sender": "bot",
+    "text": "保護者が育児休業後に復職し、又は復職する予定ですか？",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": 5, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+     ],
+    "description": "育児休業取得の延長を希望している場合を除く",
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 37, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 39,
+    "sender": "bot",
+    "text": "育児休業の取得に伴い児童を退所させた後、当該育児休業後に復職し、または復職する予定である保護者の当該児童についての再度の入所申込みですか？",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": 5, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+     ],
+    "description": "育児休業取得の延長を希望している場合を除く",
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 38, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 40,
+    "sender": "bot",
+    "text": "父又は母のいずれかが精神障害者保険福祉手帳1級から3級、愛の手帳1度から4度、身体障害者手帳1級から4級のいずれかに該当する状態にあり、申込児童の保育が著しく困難ですか？",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": 5, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+     ],
+    "description": "育児休業取得の延長を希望している場合を除く",
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 39, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 41,
+    "sender": "bot",
+    "text": "国内への単身赴任により、父または母のいずれかが申込児童と同居していませんか？",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": 3, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+     ],
+    "description": "育児休業取得の延長を希望している場合を除く",
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 40, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 42,
+    "sender": "bot",
+    "text": "保護者が同居の親族の介護又は看護をしていますか？",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": 3, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+     ],
+    "description": "基本指数の算定において、基本指数表に定める常時介護又は看護の類型に掲げる指数のいずれかを用いた場合を除きます。",
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 41, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 43,
+    "sender": "bot",
+    "text": "育児休業取得の延長を希望していますか？",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": -100, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+     ],
+    "description": null,
+    "url": null,
+    "displayCondition": null
+  },
+  {
+    "id": 44,
+    "sender": "bot",
+    "text": "同居している65歳未満の保護者の父母が無職または求職中ですか？",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": -5, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+     ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 43, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 45,
+    "sender": "bot",
+    "text": "次に、児童の状況についてお伺いします。<br/><br/>社会的養護が必要な状態にありますか？",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": 50, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+     ],
+    "description": null,
+    "url": null,
+    "displayCondition": null
+  },
+  {
+    "id": 46,
+    "sender": "bot",
+    "text": "年齢到達により、地域型保育事業による保育を行う施設を卒園し、当該施設の連携施設である保育所等への入所を希望していますか？",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": 20, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+     ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 45, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 47,
+    "sender": "bot",
+    "text": "取扱基準第2条第2項各号のいずれかに該当しますか？",
+    "options": [
+      { "optionId": 1, "text": "する", "score": 5, "scoreCondition": null },
+      { "optionId": 2, "text": "しない", "score": 0, "scoreCondition": null }
+    ],
+    "description": "取扱基準は以下をご参照ください",
+    "url": "https://www2.city.musashimurayama.lg.jp/reiki/H426902210017/H426902210017.html",
+    "displayCondition": {
+      "conditions": [{ "questionId": 46, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 48,
+    "sender": "bot",
+    "text": "同時に申込をする児童が3人以上いますか？",
+    "options": [
+      { "optionId": 1, "text": "いる", "score": 0, "scoreCondition": null },
+      { "optionId": 2, "text": "いない", "score": 0, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 47, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 49,
+    "sender": "bot",
+    "text": "多胎児を含みますか？",
+    "options": [
+      { "optionId": 1, "text": "含む", "score": 5, "scoreCondition": null },
+      { "optionId": 2, "text": "含まない", "score": 4, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 48, "condition": "includes", "answers": [1] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 50,
+    "sender": "bot",
+    "text": "同時に申込をする児童が2人いますか？",
+    "options": [
+      { "optionId": 1, "text": "いる", "score": 0, "scoreCondition": null },
+      { "optionId": 2, "text": "いない", "score": 0, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 48, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 51,
+    "sender": "bot",
+    "text": "多胎児を含みますか？",
+    "options": [
+      { "optionId": 1, "text": "含む", "score": 4, "scoreCondition": null },
+      { "optionId": 2, "text": "含まない", "score": 3, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 50, "condition": "includes", "answers": [1] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 52,
+    "sender": "bot",
+    "text": "地域型保育事業による保育を受けていますか？",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": 3, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 50, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 53,
+    "sender": "bot",
+    "text": "申込児童を認証保育所、保育室、ベビーシッター等に、月ぎめで有償で預けることを常態としていますか？",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": 3, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 52, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  }
+]
