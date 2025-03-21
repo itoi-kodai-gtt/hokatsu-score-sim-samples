@@ -1,0 +1,344 @@
+[
+  {
+    "id": 1,
+    "sender": "bot",
+    "text": "基本指数の計算を行います。<br/><br/>まず、保護者1について教えてください。<br/>以下のいずれの状況に該当しますか？",
+    "options": [
+      { "optionId": 1, "text": "存在しない（死亡、離別、行方不明、拘禁）", "score": 30, "scoreCondition": null },
+      { "optionId": 2, "text": "心身に障がいがある", "score": 0, "scoreCondition": null },
+      { "optionId": 3, "text": "疾病があり、入院もしくは居宅療養中である", "score": 0, "scoreCondition": null },
+      { "optionId": 4, "text": "妊娠、出産で休養している", "score": 21, "scoreCondition": null },
+      { "optionId": 5, "text": "就労している（内定含む外勤、自営中心の方）", "score": 0, "scoreCondition": null },
+      { "optionId": 6, "text": "就労している（自営以外が中心の方）", "score": 0, "scoreCondition": null },
+      { "optionId": 7, "text": "介護・看護を行っている", "score": 0, "scoreCondition": null },
+      { "optionId": 8, "text": "自宅の損傷や災害から復旧にあたっている", "score": 30, "scoreCondition": null },
+      { "optionId": 9, "text": "就労を目的とした通学中である（内定含む）", "score": 28, "scoreCondition": null },
+      { "optionId": 10, "text": "求職中である（起業準備含む）", "score": 5, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": null
+  },
+  {
+    "id": 2,
+    "sender": "bot",
+    "text": "保護者1の心身障がいの状況について、以下のいずれの状況に該当しますか？",
+    "options": [
+      { "optionId": 1, "text": "身体障害者手帳1･2級，療育手帳（愛の手帳）1～3度，精神障害者保健福祉手帳1･2級", "score": 30, "scoreCondition": null },
+      { "optionId": 2, "text": "身体障害者手帳3級，療育手帳（愛の手帳）4度，精神障害者保健福祉手帳3級", "score": 27, "scoreCondition": null },
+      { "optionId": 3, "text": "身体障害者手帳4級", "score": 25, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 3,
+    "sender": "bot",
+    "text": "保護者1の疾病状況について、以下のいずれの状況に該当しますか？",
+    "options": [
+      { "optionId": 1, "text": "入院（おおむね1か月以上）", "score": 30, "scoreCondition": null },
+      { "optionId": 2, "text": "寝たきりの状態，入院を要するような精神性疾患・感染症に罹患", "score": 30, "scoreCondition": null },
+      { "optionId": 3, "text": "上記には至らないが長期安静（１か月以上）を要する，精神性疾患・感染症に罹患", "score": 27, "scoreCondition": null },
+      { "optionId": 4, "text": "上記以外で保育園等の利用の必要性が認められる", "score": 25, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [3] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 4,
+    "sender": "bot",
+    "text": "保護者1の就労常態（外勤・自営中心の方）について、当てはまるものを選んでください",
+    "options": [
+      { "optionId": 1, "text": "週に40時間以上の就労を常態とする", "score": 30, "scoreCondition": null },
+      { "optionId": 2, "text": "週に37.5時間以上の就労を常態とする", "score": 28, "scoreCondition": null },
+      { "optionId": 3, "text": "週に35時間以上の就労を常態とする", "score": 26, "scoreCondition": null },
+      { "optionId": 4, "text": "週に32時間以上の就労を常態とする", "score": 24, "scoreCondition": null },
+      { "optionId": 5, "text": "週に30時間以上の就労を常態とする", "score": 22, "scoreCondition": null },
+      { "optionId": 6, "text": "週に28時間以上の就労を常態とする", "score": 20, "scoreCondition": null },
+      { "optionId": 7, "text": "週に24時間以上の就労を常態とする", "score": 18, "scoreCondition": null },
+      { "optionId": 8, "text": "週に21時間以上の就労を常態とする", "score": 16, "scoreCondition": null },
+      { "optionId": 9, "text": "週に12時間以上の就労を常態とする", "score": 10, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [5] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 5,
+    "sender": "bot",
+    "text": "保護者1の就労常態（自営中心以外の方）について、当てはまるものを選んでください",
+    "options": [
+      { "optionId": 1, "text": "週に40時間以上の就労を常態とする", "score": 28, "scoreCondition": null },
+      { "optionId": 2, "text": "週に37.5時間以上の就労を常態とする", "score": 26, "scoreCondition": null },
+      { "optionId": 3, "text": "週に35時間以上の就労を常態とする", "score": 24, "scoreCondition": null },
+      { "optionId": 4, "text": "週に32時間以上の就労を常態とする", "score": 22, "scoreCondition": null },
+      { "optionId": 5, "text": "週に30時間以上の就労を常態とする", "score": 20, "scoreCondition": null },
+      { "optionId": 6, "text": "週に28時間以上の就労を常態とする", "score": 18, "scoreCondition": null },
+      { "optionId": 7, "text": "週に24時間以上の就労を常態とする", "score": 16, "scoreCondition": null },
+      { "optionId": 8, "text": "週に21時間以上の就労を常態とする", "score": 14, "scoreCondition": null },
+      { "optionId": 9, "text": "週に12時間以上の就労を常態とする", "score": 8, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [6] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 6,
+    "sender": "bot",
+    "text": "保護者1の介護・看護（3親等以内の親族）の状況について、以下のいずれの状況に該当しますか？",
+    "options": [
+      { "optionId": 1, "text": "入院，施設通所等のため，日中に付添いが常時必要で週5日以上である", "score": 30, "scoreCondition": null },
+      { "optionId": 2, "text": "入院，施設通所等のため，日中に付添いが4時間以上必要で週3日以上である", "score": 25, "scoreCondition": null },
+      { "optionId": 3, "text": "要介護3～5，身体障害者手帳1･2級，療育手帳（愛の手帳）1･2度，精神障害者保健福祉手帳1･2級の親族の介護", "score": 30, "scoreCondition": null },
+      { "optionId": 4, "text": "身体障害者手帳3級，療育手帳（愛の手帳）3･4度，精神障害者保健福祉手帳3級の親族の介護", "score": 25, "scoreCondition": null },
+      { "optionId": 5, "text": "その他保育園等の利用の必要性が認められる場合", "score": 20, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [7] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 7,
+    "sender": "bot",
+    "text": "保護者2の心身障がいの状況について、以下のいずれの状況に該当しますか？",
+    "options": [
+      { "optionId": 1, "text": "身体障害者手帳1･2級，療育手帳（愛の手帳）1～3度，精神障害者保健福祉手帳1･2級", "score": 30, "scoreCondition": null },
+      { "optionId": 2, "text": "身体障害者手帳3級，療育手帳（愛の手帳）4度，精神障害者保健福祉手帳3級", "score": 27, "scoreCondition": null },
+      { "optionId": 3, "text": "身体障害者手帳4級", "score": 25, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [2] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 8,
+    "sender": "bot",
+    "text": "保護者2の疾病状況について、以下のいずれの状況に該当しますか？",
+    "options": [
+      { "optionId": 1, "text": "入院（おおむね1か月以上）", "score": 30, "scoreCondition": null },
+      { "optionId": 2, "text": "寝たきりの状態，入院を要するような精神性疾患・感染症に罹患", "score": 30, "scoreCondition": null },
+      { "optionId": 3, "text": "上記には至らないが長期安静（１か月以上）を要する，精神性疾患・感染症に罹患", "score": 27, "scoreCondition": null },
+      { "optionId": 4, "text": "上記以外で保育園等の利用の必要性が認められる", "score": 25, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [3] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 9,
+    "sender": "bot",
+    "text": "保護者2の就労常態（外勤・自営中心の方）について、当てはまるものを選んでください",
+    "options": [
+      { "optionId": 1, "text": "週に40時間以上の就労を常態とする", "score": 30, "scoreCondition": null },
+      { "optionId": 2, "text": "週に37.5時間以上の就労を常態とする", "score": 28, "scoreCondition": null },
+      { "optionId": 3, "text": "週に35時間以上の就労を常態とする", "score": 26, "scoreCondition": null },
+      { "optionId": 4, "text": "週に32時間以上の就労を常態とする", "score": 24, "scoreCondition": null },
+      { "optionId": 5, "text": "週に30時間以上の就労を常態とする", "score": 22, "scoreCondition": null },
+      { "optionId": 6, "text": "週に28時間以上の就労を常態とする", "score": 20, "scoreCondition": null },
+      { "optionId": 7, "text": "週に24時間以上の就労を常態とする", "score": 18, "scoreCondition": null },
+      { "optionId": 8, "text": "週に21時間以上の就労を常態とする", "score": 16, "scoreCondition": null },
+      { "optionId": 9, "text": "週に12時間以上の就労を常態とする", "score": 10, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [5] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 10,
+    "sender": "bot",
+    "text": "保護者2の就労常態（自営中心以外の方）について、当てはまるものを選んでください",
+    "options": [
+      { "optionId": 1, "text": "週に40時間以上の就労を常態とする", "score": 28, "scoreCondition": null },
+      { "optionId": 2, "text": "週に37.5時間以上の就労を常態とする", "score": 26, "scoreCondition": null },
+      { "optionId": 3, "text": "週に35時間以上の就労を常態とする", "score": 24, "scoreCondition": null },
+      { "optionId": 4, "text": "週に32時間以上の就労を常態とする", "score": 22, "scoreCondition": null },
+      { "optionId": 5, "text": "週に30時間以上の就労を常態とする", "score": 20, "scoreCondition": null },
+      { "optionId": 6, "text": "週に28時間以上の就労を常態とする", "score": 18, "scoreCondition": null },
+      { "optionId": 7, "text": "週に24時間以上の就労を常態とする", "score": 16, "scoreCondition": null },
+      { "optionId": 8, "text": "週に21時間以上の就労を常態とする", "score": 14, "scoreCondition": null },
+      { "optionId": 9, "text": "週に12時間以上の就労を常態とする", "score": 8, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [6] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 11,
+    "sender": "bot",
+    "text": "保護者2の介護・看護（3親等以内の親族）の状況について、以下のいずれの状況に該当しますか？",
+    "options": [
+      { "optionId": 1, "text": "入院，施設通所等のため，日中に付添いが常時必要で週5日以上である", "score": 30, "scoreCondition": null },
+      { "optionId": 2, "text": "入院，施設通所等のため，日中に付添いが4時間以上必要で週3日以上である", "score": 25, "scoreCondition": null },
+      { "optionId": 3, "text": "要介護3～5，身体障害者手帳1･2級，療育手帳（愛の手帳）1･2度，精神障害者保健福祉手帳1･2級の親族の介護", "score": 30, "scoreCondition": null },
+      { "optionId": 4, "text": "身体障害者手帳3級，療育手帳（愛の手帳）3･4度，精神障害者保健福祉手帳3級の親族の介護", "score": 25, "scoreCondition": null },
+      { "optionId": 5, "text": "その他保育園等の利用の必要性が認められる場合", "score": 20, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": {
+      "conditions": [{ "questionId": 1, "condition": "includes", "answers": [7] }],
+      "logic": "OR"
+    }
+  },
+  {
+    "id": 12,
+    "sender": "bot",
+    "text": "次に調整指数の計算を行います。<br/><br/>ひとり親家庭（離婚調停中を含む）に該当しますか？",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": 20, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": null
+  },
+  {
+    "id": 13,
+    "sender": "bot",
+    "text": "生活保護を受けていますか？",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": 10, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": null
+  },
+  {
+    "id": 14,
+    "sender": "bot",
+    "text": "児童虐待の防止や保護者の自立促進のため，特別な支援が必要と認められていますか？",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": 15, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": null
+  },
+  {
+    "id": 15,
+    "sender": "bot",
+    "text": "１年以上前から有償の認可外保育施設を毎月１６０時間以上月ぎめで利用している子で， 父母ともに「保育が必要な状況（求職活動，育児休業を除く）」が継続していますか？",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": 2, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": null
+  },
+  {
+    "id": 16,
+    "sender": "bot",
+    "text": "６か月以上１年未満前から有償の認可外保育施設を毎月１６０時間以上月ぎめで利用している子で， 父母ともに「保育が必要な状況（求職活動，育児休業を除く）」が継続していますか？",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": 1, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": null
+  },
+  {
+    "id": 17,
+    "sender": "bot",
+    "text": "こんぺいとう保育園，もしくは家庭的保育事業たんぽぽを卒園予定ですか？",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": 4, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": null
+  },
+  {
+    "id": 18,
+    "sender": "bot",
+    "text": "きょうだいで異なる認可保育園に通っていて，どちらかの保育園に転園を希望していますか？",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": 2, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": null
+  },
+  {
+    "id": 19,
+    "sender": "bot",
+    "text": "保護者のどちらかが保育士資格か幼稚園教諭免許をもち，次のいずれかの施設で働いていますか（予定含む）？<br /><br />認可保育所，認定こども園，地域型保育事業，認可外保育施設，企業主導型保育施設，幼稚園",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": 1, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": null
+  },
+  {
+    "id": 20,
+    "sender": "bot",
+    "text": "第１表の同じ類型番号で，異なる項目に２か所以上当てはまり，そのうち高い方の基準指数が３０を下回っていますか？",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": 2, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+    ],
+    "description": "調整指数は2～14までの幅があります。",
+    "url": null,
+    "displayCondition": null
+  },
+  {
+    "id": 21,
+    "sender": "bot",
+    "text": "認可保育園の利用を辞退した児童（辞退した年度中のみ対象）はいますか？",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": -5, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+    ],
+    "description": null,
+    "url": null,
+    "displayCondition": null
+  },
+  {
+    "id": 22,
+    "sender": "bot",
+    "text": "保育料を３か月分以上滞納していますか（既に卒園したきょうだいの分を含む）？",
+    "options": [
+      { "optionId": 1, "text": "はい", "score": -5, "scoreCondition": null },
+      { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
+    ],
+    "description": "調整指数は-5～-20までの幅があります。",
+    "url": null,
+    "displayCondition": null
+  }
+]
