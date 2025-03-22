@@ -17,7 +17,7 @@
       { "optionId": 11, "text": "ほか、児童福祉の観点から社会的な養護が必要な場合等、明らかに保育が必要と認められる場合（※）", "score": 2, "scoreCondition": null },
       { "optionId": 12, "text": "上記に該当しないが、保育を必要としている", "score": 0, "scoreCondition": null }
     ],
-    "description": "（＊）身体障害者手帳／愛の手帳（療育手帳）／精神障害者保健福祉手帳 <br/><br/> （※）保育課にお問い合わせください",
+    "description": "（＊）身体障害者手帳／愛の手帳（療育手帳）／精神障害者保健福祉手帳 <br/> （※）保育課にお問い合わせください",
     "url": null,
     "displayCondition": null
   },
@@ -325,7 +325,7 @@
   {
     "id": 17,
     "sender": "bot",
-    "text": "希望する認可保育園等に入園できない場合、育児休業の延長も許容できますか？",
+    "text": "希望する認可保育園等に入園できない場合、育児休業の延長も許容できまずか？",
     "options": [
       { "optionId": 1, "text": "はい", "score": -40, "scoreCondition": null },
       { "optionId": 2, "text": "いいえ", "score": 0, "scoreCondition": null }
