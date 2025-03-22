@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'nonce-gtt12345678';">
     <title>指数シミュレータ―サンプル</title>
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self';">
-    <style nonce="">
+    <style nonce="gtt12345678">
         .container {
             display: flex;
             flex-wrap: wrap;
@@ -19,6 +19,8 @@
             padding: 20px;
             box-sizing: border-box;
             font-size: 24px;
+            border: 1px solid green;
+            border-radius: 10px;
         }
         @media (max-width: 520px) {
             .banner {
