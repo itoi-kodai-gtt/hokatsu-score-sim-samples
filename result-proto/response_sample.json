@@ -48,10 +48,10 @@
         {
             "questionId": 2011,
             "optionId": 1,
-            "score": null,
-            "isEnabledMaxMinScore" : true,
-            "maxScore" : 28,
-            "minScore" : 2,
+            "score": 1,
+            "isEnabledMaxMinScore" : false,
+            "maxScore" : null,
+            "minScore" : null,
             "resultTitle": "世①",
             "resultDetail": "ひとり親世帯又は両親不存在世帯の場合"
         }
