@@ -1,0 +1,1249 @@
+{
+    "meta" : {
+        "id" : "[uniqueId]",
+        "version" : 1,
+        "lastUpdated" : "2025-04-22T20:12:00+09:00",
+        "municipalityCode" : "131199",
+        "municipality" : "東京都板橋区"
+    },
+    "generalSettings" : {
+        "title" : "令和７年度板橋区保育指数シミュレーター",
+        "basicScoreLabel" : "基本指数",
+        "adjustmentScoreLabel" : "調整指数",
+        "notes" : "<ul><li>実際の保育指数とシミュレーション結果とは異なる場合があります。<br>実際には、提出された申請書類の内容に基づいて実施基準指数と調整指数を算定します。</li><li>「令和7年度」の指数シミュレーションです。<br>令和7年4月入所以降の利用調整で使用される実施基準指数および調整指数をもとにして試算します。令和8年度の指数は変更となる場合があります。</li><li>指数の詳細および必要書類はウェブサイトからもご確認ください。<br><a href=\"#\">令和7年度保育施設利用申込案内</a></li></ul>",
+        "postSimulationActionSettings" : {
+            "nurseryListNavigationAction" : {
+                "isEnabled" : true,
+                "label" : "保育施設一覧を表示する",
+                "url" : "https://nurserylist.lg.jp"
+            },
+            "saveResultAction" : {
+                "isEnabled" : true,
+                "label" : "結果を保存する"
+            },
+            "scheduleConsultationAction" : {
+                "isEnabled" : true,
+                "label" : "オンライン相談する（予約制）",
+                "url" : "https://hokatsu-onestop.metro.tokyo.lg.jp/scheduleConsultation"
+            }
+        }
+    },
+    "basicScoreSettings" : {
+        "parent1Question" : {
+            "message" : "保護者1の基本指数の計算を行います。<br>保育を必要とする理由について、該当するものを選択してください。",
+            "description" : "2項目以上に該当する場合、最も指数の高い項目を保護者1の指数とします。"
+        },
+        "parent2Question" : {
+            "message" : "保護者2の基本指数の計算を行います。<br>保育を必要とする理由について、該当するものを選択してください。",
+            "description" : "2項目以上に該当する場合、最も指数の高い項目を保護者2の指数とします。"
+        },
+        "criteria" : [
+            {
+                "id" : 1001,
+                "optionLabel" : "就労している",
+                "hasSubQuestion" : true,
+                "subQuestion" : {
+                    "message" : "就労についてお聞きします。<br>月にどれくらい働いていますか。",
+                    "description" : null
+                },
+                "subCriteria" : [
+                    {
+                        "id" : 1,
+                        "optionLabel" : "月160時間以上",
+                        "score" : 30,
+                        "isEnabledMaxMinScore" : false,
+                        "maxScore" : null,
+                        "minScore" : null,
+                        "resultDetail" : "月160時間以上の就労を状態（月20日かつ日中8時間等）"
+                    },
+                    {
+                        "id" : 2,
+                        "optionLabel" : "月120時間以上",
+                        "score" : 28,
+                        "isEnabledMaxMinScore" : false,
+                        "maxScore" : null,
+                        "minScore" : null,
+                        "resultDetail" : "月120時間以上の就労を状態（月20日かつ日中6時間、月16日かつ日中8時間等）"
+                    },
+                    {
+                        "id" : 3,
+                        "optionLabel" : "月96時間以上",
+                        "score" : 26,
+                        "isEnabledMaxMinScore" : false,
+                        "maxScore" : null,
+                        "minScore" : null,
+                        "resultDetail" : "月96時間以上の就労を状態（月16日かつ日中6時間、月12日かつ日中8時間等）"
+                    },
+                    {
+                        "id" : 4,
+                        "optionLabel" : "月64時間以上",
+                        "score" : 24,
+                        "isEnabledMaxMinScore" : false,
+                        "maxScore" : null,
+                        "minScore" : null,
+                        "resultDetail" : "月64時間以上の就労を状態（月16日かつ日中4時間、月12日かつ日中6時間等）"
+                    },
+                    {
+                        "id" : 5,
+                        "optionLabel" : "月48時間以上",
+                        "score" : 22,
+                        "isEnabledMaxMinScore" : false,
+                        "maxScore" : null,
+                        "minScore" : null,
+                        "resultDetail" : "月48時間以上の就労を状態（月16日かつ日中3時間、月12日かつ日中4時間等）"
+                    }
+                ],
+                "score" : null,
+                "isEnabledMaxMinScore" : false,
+                "maxScore" : null,
+                "minScore" : null,
+                "resultTitle" : "①就労",
+                "resultDetail" : null
+            },
+            {
+                "id" : 1002,
+                "optionLabel" : "就労内定している",
+                "hasSubQuestion" : true,
+                "subQuestion" : {
+                    "message" : "就労内定についてお聞きします。<br>月にどれくらい働く予定ですか。",
+                    "description" : null
+                },
+                "subCriteria" : [
+                    {
+                        "id" : 1,
+                        "optionLabel" : "月160時間以上",
+                        "score" : 20,
+                        "isEnabledMaxMinScore" : false,
+                        "maxScore" : null,
+                        "minScore" : null,
+                        "resultDetail" : "月160時間以上の就労を状態（月20日かつ日中8時間等）"
+                    },
+                    {
+                        "id" : 2,
+                        "optionLabel" : "月120時間以上",
+                        "score" : 19,
+                        "isEnabledMaxMinScore" : false,
+                        "maxScore" : null,
+                        "minScore" : null,
+                        "resultDetail" : "月120時間以上の就労を状態（月20日かつ日中6時間、月16日かつ日中8時間等）"
+                    },
+                    {
+                        "id" : 3,
+                        "optionLabel" : "月96時間以上",
+                        "score" : 18,
+                        "isEnabledMaxMinScore" : false,
+                        "maxScore" : null,
+                        "minScore" : null,
+                        "resultDetail" : "月96時間以上の就労を状態（月16日かつ日中6時間、月12日かつ日中8時間等）"
+                    },
+                    {
+                        "id" : 4,
+                        "optionLabel" : "月64時間以上",
+                        "score" : 17,
+                        "isEnabledMaxMinScore" : false,
+                        "maxScore" : null,
+                        "minScore" : null,
+                        "resultDetail" : "月64時間以上の就労を状態（月16日かつ日中4時間、月12日かつ日中6時間等）"
+                    },
+                    {
+                        "id" : 5,
+                        "optionLabel" : "月48時間以上",
+                        "score" : 16,
+                        "isEnabledMaxMinScore" : false,
+                        "maxScore" : null,
+                        "minScore" : null,
+                        "resultDetail" : "月48時間以上の就労を状態（月16日かつ日中3時間、月12日かつ日中4時間等）"
+                    }
+                ],
+                "score" : null,
+                "isEnabledMaxMinScore" : false,
+                "maxScore" : null,
+                "minScore" : null,
+                "resultTitle" : "②就労内定",
+                "resultDetail" : null
+            },
+            {
+                "id" : 1003,
+                "optionLabel" : "求職中である・月48時間に満たない就労（または内定）をしている",
+                "hasSubQuestion" : false,
+                "subQuestion" : null,
+                "subCriteria" : null,
+                "score" : 10,
+                "isEnabledMaxMinScore" : false,
+                "maxScore" : null,
+                "minScore" : null,
+                "resultTitle" : "③求職中、求職未定",
+                "resultDetail" : "求職中・月48時間に満たない就労（内定者を含む）"
+            },
+            {
+                "id" : 1004,
+                "optionLabel" : "妊娠、出産で休養している",
+                "hasSubQuestion" : false,
+                "subQuestion" : null,
+                "subCriteria" : null,
+                "score" : 22,
+                "isEnabledMaxMinScore" : false,
+                "maxScore" : null,
+                "minScore" : null,
+                "resultTitle" : "④出産",
+                "resultDetail" : "出産の前後で休養を要するために保育ができない場合"
+            },
+            {
+                "id" : 1005,
+                "optionLabel" : "傷病があり、入院もしくは居宅療養中である",
+                "hasSubQuestion" : true,
+                "subQuestion" : {
+                    "message" : "傷病についてお聞きします。<br>以下のどの状況に該当しますか。",
+                    "description" : null
+                },
+                "subCriteria" : [
+                    {
+                        "id" : 1,
+                        "optionLabel" : "入院または入院予定（概ね1か月以上）",
+                        "score" : 30,
+                        "isEnabledMaxMinScore" : false,
+                        "maxScore" : null,
+                        "minScore" : null,
+                        "resultDetail" : "入院（概ね1か月以上）※入院予定を含む"
+                    },
+                    {
+                        "id" : 2,
+                        "optionLabel" : "常時臥床、精神性、感染性",
+                        "score" : 30,
+                        "isEnabledMaxMinScore" : false,
+                        "maxScore" : null,
+                        "minScore" : null,
+                        "resultDetail" : "常時臥床、精神性、感染性"
+                    },
+                    {
+                        "id" : 3,
+                        "optionLabel" : "常時臥床、精神性、感染性以外で、日常生活に著しく支障があると認められるもの",
+                        "score" : 27,
+                        "isEnabledMaxMinScore" : false,
+                        "maxScore" : null,
+                        "minScore" : null,
+                        "resultDetail" : "常時臥床、精神性、感染性以外で、日常生活に著しく支障があると認められるもの"
+                    },
+                    {
+                        "id" : 4,
+                        "optionLabel" : "一般療養",
+                        "score" : 20,
+                        "isEnabledMaxMinScore" : false,
+                        "maxScore" : null,
+                        "minScore" : null,
+                        "resultDetail" : "一般療養"
+                    }
+                ],
+                "score" : null,
+                "isEnabledMaxMinScore" : false,
+                "maxScore" : null,
+                "minScore" : null,
+                "resultTitle" : "⑤傷病",
+                "resultDetail" : null
+            },
+            {
+                "id" : 1006,
+                "optionLabel" : "心身に障がいがある",
+                "hasSubQuestion" : true,
+                "subQuestion" : {
+                    "message" : "心身障がいについてお聞きします。<br>以下のいずれを所有していますか。",
+                    "description" : null
+                },
+                "subCriteria" : [
+                    {
+                        "id" : 1,
+                        "optionLabel" : "身体障害者手帳1,2級・愛の手帳1,2,3度・精神障害者保健福祉手帳1,2,3級",
+                        "score" : 30,
+                        "isEnabledMaxMinScore" : false,
+                        "maxScore" : null,
+                        "minScore" : null,
+                        "resultDetail" : "身体障害者手帳１、２級・愛の手帳１、２、３度・精神障害者保健福祉手帳１、２、３級"
+                    },
+                    {
+                        "id" : 2,
+                        "optionLabel" : "身体障害者手帳3級・愛の手帳4度",
+                        "score" : 26,
+                        "isEnabledMaxMinScore" : false,
+                        "maxScore" : null,
+                        "minScore" : null,
+                        "resultDetail" : "身体障害者手帳３級・愛の手帳４度"
+                    },
+                    {
+                        "id" : 3,
+                        "optionLabel" : "身体障害者手帳4級",
+                        "score" : 24,
+                        "isEnabledMaxMinScore" : false,
+                        "maxScore" : null,
+                        "minScore" : null,
+                        "resultDetail" : "身体障害者手帳４級"
+                    }
+                ],
+                "score" : null,
+                "isEnabledMaxMinScore" : false,
+                "maxScore" : null,
+                "minScore" : null,
+                "resultTitle" : "⑥心身障がい",
+                "resultDetail" : null
+            },
+            {
+                "id" : 1007,
+                "optionLabel" : "介護・看護を行っている",
+                "hasSubQuestion" : true,
+                "subQuestion" : {
+                    "message" : "介護・看護についてお聞きします。<br>以下のどの状況に該当しますか。",
+                    "description" : null
+                },
+                "subCriteria" : [
+                    {
+                        "id" : 1,
+                        "optionLabel" : "要介護3~5・重度心身障害者（身体障害者手帳1,2級・愛の手帳1,2,3度・精神障害者保健福祉手帳1,2,3級）の介護・看護",
+                        "score" : 30,
+                        "isEnabledMaxMinScore" : false,
+                        "maxScore" : null,
+                        "minScore" : null,
+                        "resultDetail" : "要介護３～５・重度心身障害者（※）の介護・看護<br>※身体障害者手帳１、２級・愛の手帳１、２、３度・精神障害者保健福祉手帳１、２、３級"
+                    },
+                    {
+                        "id" : 2,
+                        "optionLabel" : "上記以外の介護・看護、通所・通院・入院の付き添い",
+                        "score" : null,
+                        "isEnabledMaxMinScore" : true,
+                        "maxScore" : 30,
+                        "minScore" : 10,
+                        "resultDetail" : "要介護３～５・重度心身障害者（※）の介護・看護、通所・通院・入院の付き添い<br>※身体障害者手帳１、２級・愛の手帳１、２、３度・精神障害者保健福祉手帳１、２、３級"
+                    }
+                ],
+                "score" : null,
+                "isEnabledMaxMinScore" : false,
+                "maxScore" : null,
+                "minScore" : null,
+                "resultTitle" : "⑦介護・看護",
+                "resultDetail" : null
+            },
+            {
+                "id" : 1008,
+                "optionLabel" : "不在である（死亡・離婚・別居・未婚・失踪・拘禁等）",
+                "hasSubQuestion" : false,
+                "subQuestion" : null,
+                "subCriteria" : null,
+                "score" : 30,
+                "isEnabledMaxMinScore" : false,
+                "maxScore" : null,
+                "minScore" : null,
+                "resultTitle" : "⑧両親不存在",
+                "resultDetail" : "両親がともにいない場合（収監、施設入所等により保育できない場合を含む）"
+            },
+            {
+                "id" : 1009,
+                "optionLabel" : "自宅の損傷や災害から復旧にあたっている",
+                "hasSubQuestion" : false,
+                "subQuestion" : null,
+                "subCriteria" : null,
+                "score" : 30,
+                "isEnabledMaxMinScore" : false,
+                "maxScore" : null,
+                "minScore" : null,
+                "resultTitle" : "⑨災害",
+                "resultDetail" : "火災等の家屋の損害、その他災害復旧のため保育に当たることができない場合"
+            },
+            {
+                "id" : 1010,
+                "optionLabel" : "就学中、技能取得中である",
+                "hasSubQuestion" : false,
+                "subQuestion" : null,
+                "subCriteria" : null,
+                "score" : null,
+                "isEnabledMaxMinScore" : true,
+                "maxScore" : 30,
+                "minScore" : 1,
+                "resultTitle" : "⑩特例",
+                "resultDetail" : "就学、技能取得のため保育ができない場合"
+            }
+        ],
+        "parent1Result" : {
+            "scoreLabel" : "保護者1の基本指数",
+            "buttonLabel" : "保護者2の計算へ進む"
+        },
+        "parent2Result" : {
+            "scoreLabel" : "保護者2の基本指数"
+        },
+        "result" : {
+            "scoreLabel" : "基本指数合計",
+            "description" : "保護者1,保護者2の合計を基本指数とします。",
+            "buttonLabel" : "次に進む（調整指数の計算）"
+        },
+        "advancedSettings" : {
+            "isMultiSelect" : true,
+            "multiSelectScoreMethod" : "max", //max, min, nullで選択
+            "parentScoreAggregationMethod" : "sum" //sum, max, minで選択
+        }
+    },
+    "adjustmentScoreSettings" : {
+        "initialMessage" : "調整指数を計算します。",
+        "questions" : [
+            {
+                "id" : 2001,
+                "message" : "保護者1・保護者2のどちらか、または両方が以下の手帳をお持ちですか？<br>・【身体障害者手帳】1,2級<br>・【愛の手帳】1,2,3度<br>・【精神障害者保健福祉手帳】1,2,3級",
+                "description" : null,
+                "options" : [
+                    {
+                        "id" : 1,
+                        "optionLabel" : "両方が持っている",
+                        "score" : 6,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : "個①（両方）",
+                        "resultDetail" : "保護者両方が次の手帳を持っている場合<br>【身体障害者手帳】１・２級<br>【愛の手帳】１・２・３度<br>【精神障害者保健福祉手帳】１・２・３級"
+                    },
+                    {
+                        "id" : 2,
+                        "optionLabel" : "いずれかが持っている",
+                        "score" : 3,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : "個①（片方）",
+                        "resultDetail" : "保護者片方が次の手帳を持っている場合<br>【身体障害者手帳】１・２級<br>【愛の手帳】１・２・３度<br>【精神障害者保健福祉手帳】１・２・３級"
+                    },
+                    {
+                        "id" : 3,
+                        "optionLabel" : "どちらも持っていない",
+                        "score" : 0,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : null,
+                        "resultDetail" : null
+                    }
+                ],
+                "displayConditions" : null
+            },
+            {
+                "id" : 2002,
+                "message" : "保護者1・保護者2のどちらか、または両方が以下の手帳をお持ちですか？<br/>・【身体障害者手帳】3級<br/>・【愛の手帳】4度",
+                "description" : null,
+                "options" : [
+                    {
+                        "id" : 1,
+                        "optionLabel" : "両方が持っている",
+                        "score" : 2,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : "個②（両方）",
+                        "resultDetail" : "保護者両方が次の手帳を持っている場合<br>【身体障害者手帳】３級<br>【愛の手帳】４度"
+                    },
+                    {
+                        "id" : 2,
+                        "optionLabel" : "いずれかが持っている",
+                        "score" : 1,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : "個②（片方）",
+                        "resultDetail" : "保護者片方が次の手帳を持っている場合<br>【身体障害者手帳】３級<br>【愛の手帳】４度"
+                    },
+                    {
+                        "id" : 3,
+                        "optionLabel" : "どちらも持っていない",
+                        "score" : 0,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : null,
+                        "resultDetail" : null
+                    }
+                ],
+                "displayConditions" : null
+            },
+            {
+                "id" : 2003,
+                "message" : "保護者1は以下の状況に該当しますか？<br/>・常時臥床、精神性、感染性の傷病である<br/>・概ね1か月以上入院している（または入院予定である）",
+                "description" : null,
+                "options" : [
+                    {
+                        "id" : 1,
+                        "optionLabel" : "該当する",
+                        "score" : 1,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : "個③（保護者1）",
+                        "resultDetail" : "保護者１が、常時臥床、精神性、感染性の傷病である場合、または、概ね１か月以上入院している、もしくは入院予定の場合"
+                    },
+                    {
+                        "id" : 2,
+                        "optionLabel" : "該当しない",
+                        "score" : 0,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : null,
+                        "resultDetail" : null
+                    }
+                ],
+                "displayConditions" : [
+                    {
+                        "id" : 1,
+                        "targetType" : "basic",
+                        "parentId" : 1,
+                        "targetCriteriaId" : 1005,
+                        "targetSubCriteriaId" : [1, 2],
+                        "targetQuestionId" : null,
+                        "targetAnswerId" : null,
+                        "condition" : "includes",
+                        "logicalWithPrevious" : null
+                    }
+                ]
+            },
+            {
+                "id" : 2004,
+                "message" : "保護者2は以下の状況に該当しますか？<br/>・常時臥床、精神性、感染性の傷病である<br/>・概ね1か月以上入院している（または入院予定である）",
+                "description" : null,
+                "options" : [
+                    {
+                        "id" : 1,
+                        "optionLabel" : "該当する",
+                        "score" : 1,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : "個③（保護者2）",
+                        "resultDetail" : "保護者２が、常時臥床、精神性、感染性の傷病である場合、または、概ね１か月以上入院している、もしくは入院予定の場合"
+                    },
+                    {
+                        "id" : 2,
+                        "optionLabel" : "該当しない",
+                        "score" : 0,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : null,
+                        "resultDetail" : null
+                    }
+                ],
+                "displayConditions" : [
+                    {
+                        "id" : 1,
+                        "targetType" : "basic",
+                        "parentId" : 2,
+                        "targetCriteriaId" : 1005,
+                        "targetSubCriteriaId" : [1, 2],
+                        "targetQuestionId" : null,
+                        "targetAnswerId" : null,
+                        "condition" : "includes",
+                        "logicalWithPrevious" : null
+                    }
+                ]
+            },
+            {
+                "id" : 2005,
+                "message" : "保護者1・保護者2のどちらか、または両方が育児休業中ですか？",
+                "description" : null,
+                "options" : [
+                    {
+                        "id" : 1,
+                        "optionLabel" : "はい",
+                        "score" : 1,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : "個④",
+                        "resultDetail" : "いずれかの保護者が育児休業中である場合（育児休業の対象となる児童に限る）"
+                    },
+                    {
+                        "id" : 2,
+                        "optionLabel" : "いいえ",
+                        "score" : 0,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : null,
+                        "resultDetail" : null
+                    }
+                ],
+                "displayConditions" : [
+                    {
+                        "id" : 1,
+                        "targetType" : "basic",
+                        "parentId" : 1,
+                        "targetCriteriaId" : 1001,
+                        "targetSubCriteriaId" : [1, 2, 3, 4, 5],
+                        "targetQuestionId" : null,
+                        "targetAnswerId" : null,
+                        "condition" : "includes",
+                        "logicalWithPrevious" : null
+                    },
+                    {
+                        "id" : 2,
+                        "targetType" : "basic",
+                        "parentId" : 2,
+                        "targetCriteriaId" : 1001,
+                        "targetSubCriteriaId" : [1, 2, 3, 4, 5],
+                        "targetQuestionId" : null,
+                        "targetAnswerId" : null,
+                        "condition" : "includes",
+                        "logicalWithPrevious" : "OR"
+                    }
+                ]
+            },
+            {
+                "id" : 2006,
+                "message" : "保護者1・保護者2のどちらか、または両方が以下の職種での勤務内定もしくは育児休業中で以下の職種での復職予定での申込みに該当しますか？<br>・保育士<br>・保育教諭<br>・幼稚園教諭<br>・看護師",
+                "description" : null,
+                "options" : [
+                    {
+                        "id" : 1,
+                        "optionLabel" : "はい",
+                        "score" : 0,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : null,
+                        "resultDetail" : null
+                    },
+                    {
+                        "id" : 2,
+                        "optionLabel" : "いいえ",
+                        "score" : 0,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : null,
+                        "resultDetail" : null
+                    }
+                ],
+                "displayConditions" : null
+            },
+            {
+                "id" : 2007,
+                "message" : "勤務内定もしくは復職予定の施設は以下の施設に当てはまりますか？<br>板橋区内の以下の保育施設<br>・認可保育園<br>・認証保育所<br>・認定こども園<br>・小規模保育施設<br>・幼稚園（長時間預かり保育実施園に限る）<br>・事業所内保育事業<br>・家庭的保育事業<br>・定期利用保育事業<br>・企業主導型保育事業",
+                "description" : null,
+                "options" : [
+                    {
+                        "id" : 1,
+                        "optionLabel" : "はい",
+                        "score" : 2,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : "個⑤",
+                        "resultDetail" : "いずれかの保護者が保育士・保育教諭・幼稚園教諭・看護師として右記の施設に勤務が内定している場合、又は育児休業中であり復職予定で申込みの場合"
+                    },
+                    {
+                        "id" : 2,
+                        "optionLabel" : "いいえ",
+                        "score" : 0,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : null,
+                        "resultDetail" : null
+                    }
+                ],
+                "displayConditions" : [
+                    {
+                        "id" : 1,
+                        "targetType" : "adjustment",
+                        "parentId" : null,
+                        "targetCriteriaId" : null,
+                        "targetSubCriteriaId" : null,
+                        "targetQuestionId" : 2006,
+                        "targetAnswerId" : [1],
+                        "condition" : "includes",
+                        "logicalWithPrevious" : null
+                    }
+                ]
+            },
+            {
+                "id" : 2008,
+                "message" : "保護者1・保護者2のどちらか、または両方が入所月の初日までに板橋区へ転入予定がなく、勤務地が板橋区にある状況に該当しますか？",
+                "description" : null,
+                "options" : [
+                    {
+                        "id" : 1,
+                        "optionLabel" : "両方が該当する",
+                        "score" : -2,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : "個⑥（両方）",
+                        "resultDetail" : "保護者両方が、入所月の初日までに板橋区へ転入予定がなく、勤務地が板橋区にある場合"
+                    },
+                    {
+                        "id" : 2,
+                        "optionLabel" : "いずれかが該当する",
+                        "score" : -1,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : "個⑥（片方）",
+                        "resultDetail" : "保護者片方が、入所月の初日までに板橋区へ転入予定がなく、勤務地が板橋区にある場合"
+                    },
+                    {
+                        "id" : 3,
+                        "optionLabel" : "どちらも該当しない",
+                        "score" : 0,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : null,
+                        "resultDetail" : null
+                    }
+                ],
+                "displayConditions" : null
+            },
+            {
+                "id" : 2009,
+                "message" : "保護者1・保護者2のどちらか、または両方が入所申込み締切日現在、勤務実績が1か月未満である場合に該当しますか？",
+                "description" : null,
+                "options" : [
+                    {
+                        "id" : 1,
+                        "optionLabel" : "両方が該当する",
+                        "score" : -6,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : "個⑦（両方）",
+                        "resultDetail" : "保護者両方が、入所申込み締切日現在、勤務実績が１か月未満の者である場合"
+                    },
+                    {
+                        "id" : 2,
+                        "optionLabel" : "いずれかが該当する",
+                        "score" : -3,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : "個⑦（片方）",
+                        "resultDetail" : "保護者片方が、入所申込み締切日現在、勤務実績が１か月未満の者である場合"
+                    },
+                    {
+                        "id" : 3,
+                        "optionLabel" : "どちらも該当しない",
+                        "score" : 0,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : null,
+                        "resultDetail" : null
+                    }
+                ],
+                "displayConditions" : null
+            },
+            {
+                "id" : 2010,
+                "message" : "保護者1・保護者2のどちらか、または両方が入所月の初日までに転入予定なしで勤務地なしの場合に該当しますか？",
+                "description" : null,
+                "options" : [
+                    {
+                        "id" : 1,
+                        "optionLabel" : "両方が該当する",
+                        "score" : -8,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : "個⑧（両方）",
+                        "resultDetail" : "保護者両方が、入所月の初日までに転入予定なしで勤務地なしの場合"
+                    },
+                    {
+                        "id" : 2,
+                        "optionLabel" : "いずれかが該当する",
+                        "score" : -4,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : "個⑧（片方）",
+                        "resultDetail" : "保護者片方が、入所月の初日までに転入予定なしで勤務地なしの場合"
+                    },
+                    {
+                        "id" : 3,
+                        "optionLabel" : "どちらも該当しない",
+                        "score" : 0,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : null,
+                        "resultDetail" : null
+                    }
+                ],
+                "displayConditions" : null
+            },
+            {
+                "id" : 2011,
+                "message" : "保護者世帯にかかわる状況を教えてください。<br/><br/>ひとり親世帯または両親不存在世帯に該当しますか？",
+                "description" : "戸籍謄本等の証明が必要です。離婚調停等も可。",
+                "options" : [
+                    {
+                        "id" : 1,
+                        "optionLabel" : "はい",
+                        "score" : 6,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : "世①",
+                        "resultDetail" : "ひとり親世帯又は両親不存在世帯の場合"
+                    },
+                    {
+                        "id" : 2,
+                        "optionLabel" : "いいえ",
+                        "score" : 0,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : null,
+                        "resultDetail" : null
+                    }
+                ],
+                "displayConditions" : null
+            },
+            {
+                "id" : 2012,
+                "message" : "生活保護世帯または中国残留邦人等の支援制度を受けていますか？",
+                "description" : null,
+                "options" : [
+                    {
+                        "id" : 1,
+                        "optionLabel" : "はい",
+                        "score" : 2,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : "世②",
+                        "resultDetail" : "生活保護世帯又は中国残留法人等の支援精度を受けている世帯"
+                    },
+                    {
+                        "id" : 2,
+                        "optionLabel" : "いいえ",
+                        "score" : 0,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : null,
+                        "resultDetail" : null
+                    }
+                ],
+                "displayConditions" : null
+            },
+            {
+                "id" : 2013,
+                "message" : "入所を希望する児童を、以下の施設に預けていますか？<br/>・認可外保育施設<br/>・ベビーシッター（親族以外の個人を含む）<br/>・定期利用保育<br/>・空き保育室<br/>・事業所内保育園（従業員枠）に預けていますか？",
+                "description" : null,
+                "options" : [
+                    {
+                        "id" : 1,
+                        "optionLabel" : "はい",
+                        "score" : 0,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : null,
+                        "resultDetail" : null
+                    },
+                    {
+                        "id" : 2,
+                        "optionLabel" : "いいえ",
+                        "score" : 0,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : null,
+                        "resultDetail" : null
+                    }
+                ],
+                "displayConditions" : [
+                    {
+                        "id" : 1,
+                        "targetType" : "adjustment",
+                        "parentId" : null,
+                        "targetCriteriaId" : null,
+                        "targetSubCriteriaId" : null,
+                        "targetQuestionId" : 2005,
+                        "targetAnswerId" : [1],
+                        "condition" : "not includes",
+                        "logicalWithPrevious" : null
+                    }
+                ]
+            },
+            {
+                "id" : 2014,
+                "message" : "申込み締切日時点で、1か月以上利用していて、1か月に12日以上かつ1日に4時間以上預けていることを常態としていますか？",
+                "description" : null,
+                "options" : [
+                    {
+                        "id" : 1,
+                        "optionLabel" : "はい",
+                        "score" : 2,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : "世③",
+                        "resultDetail" : "入所を希望する児童を、認可外保育施設・ベビーシッター（親族以外の個人を含む）定期利用保育・空き保育室・事業所内保育園（従業員枠）に所定の実績以上預けていて、条件を満たす場合"
+                    },
+                    {
+                        "id" : 2,
+                        "optionLabel" : "いいえ",
+                        "score" : 0,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : null,
+                        "resultDetail" : null
+                    }
+                ],
+                "displayConditions" : [
+                    {
+                        "id" : 1,
+                        "targetType" : "adjustment",
+                        "parentId" : null,
+                        "targetCriteriaId" : null,
+                        "targetSubCriteriaId" : null,
+                        "targetQuestionId" : 2013,
+                        "targetAnswerId" : [1],
+                        "condition" : "includes",
+                        "logicalWithPrevious" : null
+                    }
+                ]
+            },
+            {
+                "id" : 2015,
+                "message" : "入所を希望する児童を、職場同伴または祖父母や親族に預けて就労していますか？",
+                "description" : "申込み締切日時点で、就労していること。",
+                "options" : [
+                    {
+                        "id" : 1,
+                        "optionLabel" : "はい",
+                        "score" : 1,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : "世④",
+                        "resultDetail" : "入所を希望する児童を、職場同伴または祖父母や親族に預けて就労している場合"
+                    },
+                    {
+                        "id" : 2,
+                        "optionLabel" : "いいえ",
+                        "score" : 0,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : null,
+                        "resultDetail" : null
+                    }
+                ],
+                "displayConditions" : [
+                    {
+                        "id" : 1,
+                        "targetType" : "adjustment",
+                        "parentId" : null,
+                        "targetCriteriaId" : null,
+                        "targetSubCriteriaId" : null,
+                        "targetQuestionId" : 2005,
+                        "targetAnswerId" : [1],
+                        "condition" : "not includes",
+                        "logicalWithPrevious" : null
+                    },
+                    {
+                        "id" : 2,
+                        "targetType" : "adjustment",
+                        "parentId" : null,
+                        "targetCriteriaId" : null,
+                        "targetSubCriteriaId" : null,
+                        "targetQuestionId" : 2014,
+                        "targetAnswerId" : [1],
+                        "condition" : "not includes",
+                        "logicalWithPrevious" : "AND"
+                    }
+                ]
+            },
+            {
+                "id" : 2016,
+                "message" : "前年度住民税非課税世帯に該当しますか？",
+                "description" : null,
+                "options" : [
+                    {
+                        "id" : 1,
+                        "optionLabel" : "はい",
+                        "score" : 1,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : "世⑤",
+                        "resultDetail" : "前年度住民税非課税世帯（生活保護世帯を除く）"
+                    },
+                    {
+                        "id" : 2,
+                        "optionLabel" : "いいえ",
+                        "score" : 0,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : null,
+                        "resultDetail" : null
+                    }
+                ],
+                "displayConditions" : null
+            },
+            {
+                "id" : 2017,
+                "message" : "入所を希望する児童は要支援児保育の対象となりますか？",
+                "description" : null,
+                "options" : [
+                    {
+                        "id" : 1,
+                        "optionLabel" : "はい",
+                        "score" : 5,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : "世⑥",
+                        "resultDetail" : "入所を希望する児童が、要支援児保育の対象となる場合"
+                    },
+                    {
+                        "id" : 2,
+                        "optionLabel" : "いいえ",
+                        "score" : 0,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : null,
+                        "resultDetail" : null
+                    }
+                ],
+                "displayConditions" : null
+            },
+            {
+                "id" : 2018,
+                "message" : "入所を希望する児童は双生児以上ですか？",
+                "description" : "当該児童の入所に限る。",
+                "options" : [
+                    {
+                        "id" : 1,
+                        "optionLabel" : "はい",
+                        "score" : 1,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : "世⑦",
+                        "resultDetail" : "入所を希望する児童が双生児以上である世帯"
+                    },
+                    {
+                        "id" : 2,
+                        "optionLabel" : "いいえ",
+                        "score" : 0,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : null,
+                        "resultDetail" : null
+                    }
+                ],
+                "displayConditions" : null
+            },
+            {
+                "id" : 2019,
+                "message" : "入所申込み締切日かつ入所月時点において、未就学児が2人いる世帯に該当しますか？",
+                "description" : "入所月時点できょうだいが未就学児である場合に限る。出生前児童の申込みをしている世帯にも適用。",
+                "options" : [
+                    {
+                        "id" : 1,
+                        "optionLabel" : "はい",
+                        "score" : 2,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : "世⑧",
+                        "resultDetail" : "入所申込み締切日かつ入所月時点において、未就学児が２人以上いる世帯"
+                    },
+                    {
+                        "id" : 2,
+                        "optionLabel" : "いいえ",
+                        "score" : 0,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null
+                    }
+                ],
+                "displayConditions" : [
+                    {
+                        "id" : 1,
+                        "targetType" : "basic",
+                        "parentId" : 1,
+                        "targetCriteriaId" : 1004,
+                        "targetSubCriteriaId" : null,
+                        "targetQuestionId" : null,
+                        "targetAnswerId" : null,
+                        "condition" : "includes",
+                        "logicalWithPrevious" : null
+                    },
+                    {
+                        "id" : 2,
+                        "targetType" : "basic",
+                        "parentId" : 2,
+                        "targetCriteriaId" : 1004,
+                        "targetSubCriteriaId" : null,
+                        "targetQuestionId" : null,
+                        "targetAnswerId" : null,
+                        "condition" : "includes",
+                        "logicalWithPrevious" : "OR"
+                    }
+                ]
+            },
+            {
+                "id" : 2020,
+                "message" : "入所申込み締切日かつ入所日時点において、未就学児が3人以上いる世帯に該当しますか？",
+                "description" : "入所月時点できょうだいが未就学児である場合に限る。出生前児童の申込みをしている世帯にも適用。",
+                "options" : [
+                    {
+                        "id" : 1,
+                        "optionLabel" : "はい",
+                        "score" : 5,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : "世⑨",
+                        "resultDetail" : "入所申込み締切日かつ入所日時点において、未就学児が２人いる世帯"
+                    },
+                    {
+                        "id" : 2,
+                        "optionLabel" : "いいえ",
+                        "score" : 0,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : null,
+                        "resultDetail" : null
+                    }
+                ],
+                "displayConditions" : [
+                    {
+                        "id" : 1,
+                        "targetType" : "basic",
+                        "parentId" : 1,
+                        "targetCriteriaId" : 1004,
+                        "targetSubCriteriaId" : null,
+                        "targetQuestionId" : null,
+                        "targetAnswerId" : null,
+                        "condition" : "includes",
+                        "logicalWithPrevious" : null
+                    },
+                    {
+                        "id" : 2,
+                        "targetType" : "basic",
+                        "parentId" : 2,
+                        "targetCriteriaId" : 1004,
+                        "targetSubCriteriaId" : null,
+                        "targetQuestionId" : null,
+                        "targetAnswerId" : null,
+                        "condition" : "includes",
+                        "logicalWithPrevious" : "OR"
+                    }
+                ]
+            },
+            {
+                "id" : 2021,
+                "message" : "身体障害者手帳、愛の手帳もしくは精神障害者保健福祉手帳の交付又は要介護3,4,5の認定を受けている同居の家族がいる世帯に該当しますか？",
+                "description" : "「同居」とは、住民基本台帳上の住所が同一であることをいい、同住所別世帯の場合や、二世帯住宅の場合も「同居」となります。",
+                "options" : [
+                    {
+                        "id" : 1,
+                        "optionLabel" : "はい",
+                        "score" : 1,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : "世⑩",
+                        "resultDetail" : "身体障害者手帳、愛の手帳もしくは精神障害者保健福祉手帳の交付又は要介護３・４・５（在宅介護に限る。）の認定を受けている同居の家族（当該児童又は保護者を除く。）がいる世帯"
+                    },
+                    {
+                        "id" : 2,
+                        "optionLabel" : "いいえ",
+                        "score" : 0,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : null,
+                        "resultDetail" : null
+                    }
+                ],
+                "displayConditions" : null
+            },
+            {
+                "id" : 2022,
+                "message" : "保育料または延長保育料のいずれかを入所申込み締切日において延べ3か月以上滞納していますか？",
+                "description" : null,
+                "options" : [
+                    {
+                        "id" : 1,
+                        "optionLabel" : "はい",
+                        "score" : -10,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : "世⑪",
+                        "resultDetail" : "きょうだいが在園児又は卒園児（以下「在園児等」という）であって、当該在園児等に係る保育料又は延長保育料のいずれかが入所申込締切日において正答な理由なく延べ３か月以上滞納されている場合"
+                    },
+                    {
+                        "id" : 2,
+                        "optionLabel" : "いいえ",
+                        "score" : 0,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : null,
+                        "resultDetail" : null
+                    }
+                ],
+                "displayConditions" : null
+            },
+            {
+                "id" : 2023,
+                "message" : "保育料または延長保育料のいずれかを入所申込み締切日において延べ3か月以上滞納していますか？",
+                "description" : null,
+                "options" : [
+                    {
+                        "id" : 1,
+                        "optionLabel" : "はい",
+                        "score" : 1,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : "世⑫",
+                        "resultDetail" : "入所を希望する児童を、板橋区外の認可保育施設に預けている場合"
+                    },
+                    {
+                        "id" : 2,
+                        "optionLabel" : "いいえ",
+                        "score" : 0,
+                        "isEnabledMaxMinScore" : false,
+                        "minScore" : null,
+                        "maxScore" : null,
+                        "resultTitle" : null,
+                        "resultDetail" : null
+                    }
+                ],
+                "displayConditions" : [
+                    {
+                        "id" : 1,
+                        "targetType" : "adjustment",
+                        "parentId" : null,
+                        "targetCriteriaId" : null,
+                        "targetSubCriteriaId" : null,
+                        "targetQuestionId" : 2015,
+                        "targetAnswerId" : 1,
+                        "condition" : "not includes",
+                        "logicalWithPrevious" : null
+                    }
+                ]
+            }
+        ],
+        "groups" : [
+            {
+                "id" : 1,
+                "targetQuestionIds" : [2021, 2022],
+                "groupAggregationMethod" : "max" //max, minで選択
+            }
+        ]
+    }
+}
